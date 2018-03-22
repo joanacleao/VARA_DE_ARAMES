@@ -1,0 +1,19 @@
+Por favor preencha o seguinte formulário:
+<%= form_for @contact do |c| %>
+    <%= c.label :name, 'Nome/Empresa:' %>
+    <%= c.text_field :name %>
+    <%= c.label :email, 'E-mail:' %>
+    <%= c.text_field :email %>
+    <%= c.label :phone, 'Telefone:' %>
+    <%= c.text_field :phone %>
+    <%= c.label :n_pax, 'N adultos:' %>
+    <%= c.text_field :n_pax %>
+    <%= c.label :n_ch, 'N crianças:' %>
+    <%= c.text_field :n_ch %>
+    <%= c.label :date, 'Data:' %>
+    <%= c.text_field :date %>
+    <%= c.label :localization, 'Local:' %>
+    <%= c.text_field :localization %>
+
+    <%= c.submit %>
+<% end %>

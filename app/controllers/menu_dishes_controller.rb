@@ -1,0 +1,2 @@
+class MenuDishesController < ApplicationController
+end
