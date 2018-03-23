@@ -5,8 +5,9 @@ class ContactsController < ApplicationController
 
  def create
    @contact = Contact.new(contact_params)
+
    if @contact.save
-    beybug
+
       redirect_to root_path
     else
       render :new
