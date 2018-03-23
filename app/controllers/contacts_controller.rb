@@ -5,13 +5,19 @@ class ContactsController < ApplicationController
 
  def create
    @contact = Contact.new(contact_params)
-   @contact.save
+   if @contact.save
+    beybug
+      redirect_to root_path
+    else
+      render :new
+    end
+
  end
 
  private
 
   def contact_params
-    params.require(:contact).permit(:name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu_id)
+    params.require(:contact).permit(:name, :email, :phone, :n_pax, :n_ch, :date, :localization)
   end
 
 end
