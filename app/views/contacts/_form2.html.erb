@@ -1,0 +1,35 @@
+<%= form_for @contact_dish , url: { action: "create" } do |c| %>
+<div class="field">
+  <%= c.label "Pratos seleccionados:" %><br />
+  <%= c.collection_check_boxes :contact_dishes, Dish.all, :id, :name do |dish| %>
+  <div class="collection-check-box">
+    <% if @menu_dishes.nil? %>
+      <%= dish.check_box checked: false %>
+      <%= dish.label %>
+    <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
+      <%= dish.check_box checked: true %>
+      <%= dish.label %>
+    <% else %>
+      <%= dish.check_box checked: false %>
+      <%= dish.label %>
+    <% end %>
+  </div>
+  <% end %>
+  <div>
+    <%= c.label :comment, 'Dados adicionais:' %>
+    <%= c.text_field :comment %>
+  </div>
+  <% unless @name.nil? %>
+  <%= c.hidden_field :name, :value => @name %>
+  <%= c.hidden_field :email, :value => @email %>
+  <%= c.hidden_field :phone, :value => @phone %>
+  <%= c.hidden_field :n_pax, :value => @n_pax %>
+  <%= c.hidden_field :n_ch, :value => @n_ch %>
+  <%= c.hidden_field :date, :value => @date %>
+  <%= c.hidden_field :localization, :value => @location %>
+  <%= c.hidden_field :menu_id, :value => @menu_id %>
+  <% end %>
+
+  <%= c.submit %>
+</div>
+  <% end %>

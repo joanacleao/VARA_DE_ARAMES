@@ -1,0 +1,26 @@
+<div class="banner">
+  <a href="/" ><%= image_tag("/assets/logo.jpg", alt: "logo") %></a>
+</div>
+
+  <div class="menu">
+    <div class = "menu-left">
+      <div class="dropdown">
+        <button class="dropbtn">PRODUTOS</button>
+        <div class="dropdown-content">
+          <% @menus.each do |menu| %>
+          <%= link_to menu.name, menu_path(menu.id) %>
+          <% end %>
+          <a href="#">TODAS OPÇÕES</a>
+          <a href="#">PERSONALIZADO</a>
+        </div>
+      </div>
+      <a href="/galery">GALERIA</a>
+      <a href="/about">FILOSOFIA</a>
+      <a href="/contact">CONTACTOS</a>
+    </div>
+    <div class = "menu-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+       <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
