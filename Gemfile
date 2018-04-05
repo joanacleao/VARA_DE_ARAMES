@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.3'
 
+gem "letter_opener", group: :development
 gem 'mail_form'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'

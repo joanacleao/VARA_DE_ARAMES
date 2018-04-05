@@ -1,23 +1,100 @@
 <%= form_for @contact_dish , url: { action: "create" } do |c| %>
-<div class="field">
-  <%= c.label "Pratos seleccionados:" %><br />
-  <%= c.collection_check_boxes :contact_dishes, Dish.all, :id, :name do |dish| %>
-  <div class="collection-check-box">
-    <% if @menu_dishes.nil? %>
-      <%= dish.check_box checked: false %>
-      <%= dish.label %>
-    <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
-      <%= dish.check_box checked: true %>
-      <%= dish.label %>
-    <% else %>
-      <%= dish.check_box checked: false %>
-      <%= dish.label %>
-    <% end %>
+<div class="form-horizontal field" id="details">
+  <div class="subtitle"><p> verifique os pratos seleccionados e adicione / altere o que desejar:</p></div>
+
+  <div class="box">
+    <div class="check-groups">
+      <div class="check-group">
+        <p>Para Acordar:</p>
+        <%= c.collection_check_boxes :contact_dishes, @dishes.where(meal_type:"Para Acordar"), :id, :name do |dish| %>
+        <div class="collection-check-box">
+          <% if @menu_dishes.nil? %>
+          <%= dish.check_box checked: false %>
+          <%= dish.label %>
+          <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
+          <%= dish.check_box checked: true %>
+          <%= dish.label %>
+          <% else %>
+          <%= dish.check_box checked: false %>
+          <%= dish.label %>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+      <div class="check-group">
+        <p>Para Petiscar:</p>
+        <%= c.collection_check_boxes :contact_dishes, @dishes.where(meal_type:"Para Petiscar"), :id, :name do |dish| %>
+        <div class="collection-check-box">
+          <% if @menu_dishes.nil? %>
+          <%= dish.check_box checked: false %>
+          <%= dish.label %>
+          <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
+          <%= dish.check_box checked: true %>
+          <%= dish.label %>
+          <% else %>
+          <%= dish.check_box checked: false %>
+          <%= dish.label %>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+      <div class="check-group">
+        <p>Para Almoçar | Jantar:</p>
+        <%= c.collection_check_boxes :contact_dishes, @dishes.where(meal_type:"Para Almoçar | Jantar"), :id, :name do |dish| %>
+        <div class="collection-check-box">
+          <% if @menu_dishes.nil? %>
+          <%= dish.check_box checked: false %>
+          <%= dish.label %>
+          <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
+          <%= dish.check_box checked: true %>
+          <%= dish.label %>
+          <% else %>
+          <%= dish.check_box checked: false %>
+          <%= dish.label %>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+      <div class="check-group">
+        <p>Para Acompanhar:</p>
+        <%= c.collection_check_boxes :contact_dishes, @dishes.where(meal_type:"Para Acompanhar"), :id, :name do |dish| %>
+        <div class="collection-check-box">
+          <% if @menu_dishes.nil? %>
+          <%= dish.check_box checked: false %>
+          <%= dish.label %>
+          <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
+          <%= dish.check_box checked: true %>
+          <%= dish.label %>
+          <% else %>
+          <%= dish.check_box checked: false %>
+          <%= dish.label %>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+      <div class="check-group">
+        <p>Para Beber:</p>
+        <%= c.collection_check_boxes :contact_dishes, @dishes.where(meal_type:"Para Beber"), :id, :name do |dish| %>
+        <div class="collection-check-box">
+          <% if @menu_dishes.nil? %>
+          <%= dish.check_box checked: false %>
+          <%= dish.label %>
+          <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
+          <%= dish.check_box checked: true %>
+          <%= dish.label %>
+          <% else %>
+          <%= dish.check_box checked: false %>
+          <%= dish.label %>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <% end %>
-  <div>
-    <%= c.label :comment, 'Dados adicionais:' %>
-    <%= c.text_field :comment %>
+
+  <div class="add-data">
+    <%= c.text_field :comment, placeholder:"Dados adicionais (se necessário)" %>
+      <%= c.submit value="Enviar", :class => 'enviar'%>
   </div>
   <% unless @name.nil? %>
   <%= c.hidden_field :name, :value => @name %>
@@ -30,6 +107,8 @@
   <%= c.hidden_field :menu_id, :value => @menu_id %>
   <% end %>
 
-  <%= c.submit %>
-</div>
+
   <% end %>
+</div>
+
+

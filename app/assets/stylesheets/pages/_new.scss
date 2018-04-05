@@ -1,0 +1,194 @@
+.form-container{
+
+  position: relative;
+  top:20vh;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  min-height: 80vh;
+  background-image: image-url('/assets/background_form.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+}
+
+.form-horizontal{
+    background-color: #Ffffff;
+    border: 1px solid #000000;
+  border-radius: 3px;
+    padding: 2%;
+     margin-top: 1%;
+     width: 80vw;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+      margin-bottom: 3%;
+    }
+}
+
+select:focus {
+  outline:none !important;
+}
+
+
+.form{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+  width: 100%;
+  font-size: 0.9em;
+  font-variant: all-petite-caps;
+  width: 80%;
+  label{
+    margin-left: 2%;
+
+  }
+  select {
+    background-color: white;
+
+  }
+
+  #contact_name{
+    width: 25vw;
+  }
+  #contact_email{
+    width: 20vw;
+  }
+
+  #contact_date{
+    width: 10vw;
+  }
+
+  #contact_n_pax{
+    width: 6vw;
+  }
+  #contact_n_ch{
+    width: 6vw;
+  }
+}
+
+.form-all{
+  p{
+    font-size: 1em !important;
+    margin-bottom: 1%;
+    font-variant: all-petite-caps;
+  }
+}
+
+
+.field{
+  font-size: 1em;
+  font-variant: all-petite-caps;
+
+
+}
+
+.check-groups{
+  display: flex;
+}
+
+.box{
+  width: 100%;
+  overflow: scroll;
+}
+
+.check-groups{
+  width: 250%;
+  overflow: hidden;
+  z-index: 100;
+  background-color:white;
+}
+
+.check-group{
+  margin-right: 2%;
+
+  p{
+    text-align: center;
+  }
+}
+
+.add-data{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display:flex;
+  justify-content: space-evenly;
+  width: 100%;
+      align-items: center;
+  #contact_dish_comment{
+    width: 40vw;
+    height: 15vh;
+  }
+
+}
+
+.title{
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+.subtitle{
+  display: flex;
+  justify-content: flex-start;
+  width:100%;
+}
+
+.enviar{
+  display: inline-block;
+  padding: 12px 18px;
+  text-decoration: none;
+  position: relative;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #000000;
+  overflow: hidden;
+  &:hover {
+    color: #F1F1F2;
+    background: #000000;
+  }
+}
+
+input::-webkit-datetime-edit{ color: #757575; }
+
+
+input[type="checkbox"]{
+    -webkit-appearance: initial;
+    appearance: initial;
+    width: 10px;
+    height: 10px;
+  border: 1px solid #000000;
+    background: white;
+
+    position: relative;
+}
+input[type="checkbox"]:checked {
+    background: black;
+}
+input[type="checkbox"]:checked:after {
+    /* Heres your symbol replacement - this is a tick in Unicode. */
+    content: "";
+    // color: #fff;
+    /* The following positions my tick in the center,
+     * but you could just overlay the entire box
+     * with a full after element with a background if you want to */
+    // position: absolute;
+    // left: 50%;
+    // top: 50%;
+    // -webkit-transform: translate(-50%,-50%);
+    // -moz-transform: translate(-50%,-50%);
+    // -ms-transform: translate(-50%,-50%);
+    // transform: translate(-50%,-50%);
+    /*
+     * If you want to fully change the check appearance, use the following:
+     * content: " ";
+     * width: 100%;
+     * height: 100%;
+     * background: blue;
+     * top: 0;
+     * left: 0;
+     */
+}

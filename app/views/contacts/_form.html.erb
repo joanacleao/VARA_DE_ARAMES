@@ -1,24 +1,25 @@
-Por favor preencha o seguinte formulário:
-<%= form_for @contact, html: { class: "form-horizontal center" }, url: { action: "precreate" } do |c| %>
-<div class="form-group">
-<%= c.label :name, 'Nome/Empresa:' %>
-<%= c.text_field :name %>
+<div class="form-all">
+
+  <%= form_for @contact, html: { class: "form-horizontal center" }, url: { action: "precreate" } do |c| %>
+  <div class="title"><p>1 - preencha por favor os seguintes dados:</p></div>
+
+  <div class="form">
+    <%= c.text_field :name, placeholder:"Nome/Empresa"%>
+    <%= c.text_field :email, placeholder:"Email" %>
+    <%= c.text_field :phone , placeholder:"Telefone" %>
+  </div>
+  <div class="form">
+    <%= c.date_field :date, as: :date %>
+    <%= c.text_field :localization, placeholder:"Local"  %>
+    <%= c.text_field :n_pax, placeholder:"Adultos" %>
+    <%= c.text_field :n_ch, placeholder:"Crianças" %>
+    <%= c.label :menu_id, 'Tipo de Evento:' %>
+    <%= c.select :menu_id, options_from_collection_for_select(@menus, 'id', 'name' , :selected => c.object.menu_id) , include_blank: true%>
+  </div >
+  <% end %>
 </div>
-<%= c.label :email, 'E-mail:' %>
-<%= c.text_field :email %>
-<%= c.label :phone, 'Telefone:' %>
-<%= c.text_field :phone %>
-<%= c.label :n_pax, 'N adultos:' %>
-<%= c.text_field :n_pax %>
-<%= c.label :n_ch, 'N crianças:' %>
-<%= c.text_field :n_ch %>
-<%= c.label :date, 'Data:' %>
-<%= c.text_field :date %>
-<%= c.label :localization, 'Local:' %>
-<%= c.text_field :localization %>
-<%= c.label :menu_id, 'Tipo de Evento:' %>
-<%= c.select :menu_id, options_from_collection_for_select(@menu, 'id', 'name') , include_blank: true, :selected => params[:menu_id] %>
-<% end %>
+
+
 
 
 

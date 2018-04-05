@@ -1,0 +1,18 @@
+<p>Formulário:</p>
+
+<p>Nome/Empresa: <%= @contact.name %></p>
+<p>Email: <%= @contact.email %></p>
+<p>Telefone: <%= @contact.phone %></p>
+<p>Data: <%= @contact.date %></p>
+<p>Local: <%= @contact.localization %></p>
+<p>Nº Adultos: <%= @contact.n_pax %></p>
+<p>Nº Crianças: <%= @contact.n_ch %></p>
+<p>Menu: <%= Menu.find(Contact.last.menu_id).name %> </p>
+<p>Pratos seleccionados:</p>
+<% @contact.contact_dishes.each do |dish| %>
+<div>
+  <ul><%= dish.dish.name %></ul>
+<% end %>
+</div>
+
+<p>Dados adicionais: <%=@contact.comment %></p>
