@@ -1,0 +1,97 @@
+<%= render 'shared/banner_small' %>
+  <div class="index-all">
+    <div class="box">
+      <div class = "index-scroll">
+    <div class="index-menu-content">
+      <div class="index-menu-photo">
+        <%= image_tag("/assets/acordar", alt: "acordar") %>
+      </div>
+      <div class="index-menu">
+        <div class="index-menu-title">
+          <h1><%= @dishes_ac.first.meal_type %></h1>
+        </div>
+        <div class="index-menu-dishes">
+          <% @dishes_ac.each do |dish|  %>
+          <p><%= dish.name %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="index-menu-content">
+      <div class="index-menu-photo">
+        <%= image_tag("/assets/petiscar", alt: "petiscar") %>
+      </div>
+      <div class="index-menu">
+        <div class="index-menu-title">
+          <h1><%= @dishes_pet.first.meal_type %></h1>
+        </div>
+        <div class="index-menu-dishes">
+          <% @dishes_pet.each do |dish|  %>
+          <p><%= dish.name %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="index-menu-content">
+      <div class="index-menu-photo">
+        <%= image_tag("/assets/almocar", alt: "almocar/jantar") %>
+      </div>
+      <div class="index-menu">
+        <div class="index-menu-title">
+          <h1><%= @dishes_aj.first.meal_type %></h1>
+        </div>
+        <div class="index-menu-dishes">
+          <% @dishes_aj.each do |dish|  %>
+          <p><%= dish.name %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="index-menu-content">
+      <div class="index-menu-photo">
+        <%= image_tag("/assets/acompanhar", alt: "acordar") %>
+      </div>
+      <div class="index-menu">
+        <div class="index-menu-title">
+          <h1><%= @dishes_acomp.first.meal_type %></h1>
+        </div>
+        <div class="index-menu-dishes">
+          <% @dishes_acomp.each do |dish|  %>
+          <p><%= dish.name %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="index-menu-content">
+      <div class="index-menu-photo">
+        <%= image_tag("/assets/terminar", alt: "terminar") %>
+      </div>
+      <div class="index-menu">
+        <div class="index-menu-title">
+          <h1><%= @dishes_ter.first.meal_type %></h1>
+        </div>
+        <div class="index-menu-dishes">
+          <% @dishes_ter.each do |dish|  %>
+          <p><%= dish.name %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="index-menu-content">
+      <div class="index-menu-photo">
+        <%= image_tag("/assets/terminar", alt: "beber") %>
+      </div>
+      <div class="index-menu">
+        <div class="index-menu-title">
+          <h1><%= @dishes_bbr.first.meal_type %></h1>
+        </div>
+        <div class="index-menu-dishes">
+          <% @dishes_bbr.each do |dish|  %>
+          <p><%= dish.name %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

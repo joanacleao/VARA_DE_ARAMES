@@ -2,3 +2,53 @@
 @import "home";
 @import "show";
 @import "new";
+
+.index-all{
+  font-variant: all-petite-caps;
+  position: absolute;
+  top: 20vh;
+  width: 100%;
+  margin-bottom: 1%;
+}
+
+.index-box{
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.index-scroll{
+  display: flex;
+  width: 300%;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.index-menu-content{
+  display: flex;
+  margin: 1%;
+  margin-bottom: 0%;
+}
+.index-menu{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1%;
+  width: 30vw;
+
+}
+
+.index-menu-photo{
+  img{
+    height: 90vh;
+  }
+}
+.index-menu-title h1{
+  font-size: 1.5em;
+  line-height: 50%;
+  margin-top: 0;
+  margin-bottom: 5%;
+
+}
+
+
+
+
