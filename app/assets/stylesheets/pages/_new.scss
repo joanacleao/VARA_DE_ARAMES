@@ -5,7 +5,7 @@
   display: flex;
   align-items:center;
   flex-direction: column;
-  min-height: 80vh;
+  height: 80vh;
   background-image: image-url('/assets/background_form.png');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -90,8 +90,28 @@ select:focus {
 
 .box{
   width: 100%;
-  overflow: scroll;
+  overflow-x: scroll;
 }
+
+
+.box::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+}
+
+.box::-webkit-scrollbar-track {
+
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.box::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
 
 .check-groups{
   width: 250%;
@@ -192,3 +212,9 @@ input[type="checkbox"]:checked:after {
      * left: 0;
      */
 }
+
+.form-scroll{
+  overflow-y: scroll;
+  height: 80vh;
+}
+
