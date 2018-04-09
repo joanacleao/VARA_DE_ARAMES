@@ -1,4 +1,5 @@
 <%= render 'shared/banner_small' %>
+<div class="background-image">
 <div class = "form-container">
   <div class = "form-scroll">
 <%= render 'form' %>
@@ -7,17 +8,4 @@
 <% end %>
 </div>
 </div>
-<!--
-
-<script type="text/javascript">
-  var select = document.getElementById('contact_menu_id');
-  var details_div = document.getElementById('details');
-  select.onchange = function() {
-    console.log("Test");
-     if(this.value != "") {
-       details_div.style['display'] = 'block';
-     } else {
-       details_div.style['display'] = 'none';
-     }
-  };
-</script> -->
+</div>

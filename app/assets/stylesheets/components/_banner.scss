@@ -18,7 +18,7 @@
     z-index:100;
     img{
       display:inline-block;
-      height: 25vh !important;
+      height: 30vh !important;
       margin: 0 auto;
     }
   }
@@ -37,6 +37,7 @@
       color: black;
       font-size: 0.8em;
       text-decoration: none;
+      letter-spacing: 0.1em;
     }
   }
 
@@ -54,9 +55,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 50%;
+    width: auto;
+    flex-direction: column;
+    height: 70vh;
     a {
-      padding: 0 2%;
+      padding: 15% 15%;
     }
 
   }
@@ -68,7 +71,7 @@
     padding: 0;
     font-size: 0.8em;
     border: none;
-
+    letter-spacing: 0.1em;
 
   }
 

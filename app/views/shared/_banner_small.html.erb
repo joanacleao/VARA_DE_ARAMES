@@ -13,17 +13,17 @@
             <% @menus.each do |menu| %>
             <li><%= link_to menu.name, menu_path(menu.id) %></li>
             <% end %>
+          </div>
+          <%= link_to "VA à descoberta", dishes_index_path %>
         </div>
-        <a href="#">VA à descoberta</a>
       </div>
+      <a href="/galery">GALERIA</a>
+      <a href="/about">FILOSOFIA</a>
+      <a href="/contact">CONTACTOS</a>
     </div>
-        <a href="/galery">GALERIA</a>
-        <a href="/about">FILOSOFIA</a>
-        <a href="/contact">CONTACTOS</a>
+    <div class = "menu-small-right">
+      <a href="https://www.facebook.com/Vara-de-Arames-283953025465518/"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/varadearames"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:joanacastroleao@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
   </div>
-      <div class = "menu-small-right">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fas fa-envelope"></i></a>
-      </div>
-</div>

@@ -14,7 +14,7 @@
     <%= c.text_field :n_pax, placeholder:"Adultos" %>
     <%= c.text_field :n_ch, placeholder:"Crianças" %>
     <%= c.label :menu_id, 'Tipo de Evento:' %>
-    <%= c.select :menu_id, options_from_collection_for_select(@menus, 'id', 'name' , :selected => c.object.menu_id) , include_blank: true%>
+    <%= c.select :menu_id, options_from_collection_for_select(@menus, 'id', 'name' , :selected => c.object.menu_id, :class =>"form-list") , include_blank: true%>
   </div >
   <% end %>
 </div>

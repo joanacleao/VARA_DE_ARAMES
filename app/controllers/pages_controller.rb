@@ -5,13 +5,15 @@ class PagesController < ApplicationController
   end
 
   def about
-  end
+   @menus = Menu.all
+ end
 
-  def contact
-  end
+ def contact
+   @menus = Menu.all
+ end
 
-  def galery
-
-  end
+ def galery
+   @menus = Menu.all
+ end
 
 end
