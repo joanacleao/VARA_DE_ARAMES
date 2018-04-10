@@ -2,13 +2,11 @@
 
   <%= form_for @contact, html: { class: "form-horizontal center" }, url: { action: "precreate" } do |c| %>
   <div class="title"><p>1 - preencha por favor os seguintes dados:</p></div>
-
+  <div class="">
   <div class="form">
     <%= c.text_field :name, placeholder:"Nome/Empresa"%>
     <%= c.text_field :email, placeholder:"Email" %>
     <%= c.text_field :phone , placeholder:"Telefone" %>
-  </div>
-  <div class="form">
     <%= c.date_field :date, as: :date %>
     <%= c.text_field :localization, placeholder:"Local"  %>
     <%= c.text_field :n_pax, placeholder:"Adultos" %>
@@ -16,6 +14,7 @@
     <%= c.label :menu_id, 'Tipo de Evento:' %>
     <%= c.select :menu_id, options_from_collection_for_select(@menus, 'id', 'name' , :selected => c.object.menu_id, :class =>"form-list") , include_blank: true%>
   </div >
+  </div>
   <% end %>
 </div>
 

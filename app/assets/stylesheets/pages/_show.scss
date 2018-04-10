@@ -2,7 +2,9 @@
   position: absolute;
   top:20vh;
   width: 100%;
-  padding: 4% 4% 2% 8%;
+  height: 80vh;
+  // padding: 4% 4% 2% 8%;
+  padding: 4% 8% 4% 8%;
   display:flex;
   justify-content: space-between;
   background-color: white;
@@ -10,15 +12,15 @@
 }
 
 .menu-content {
-
   font-variant: all-petite-caps;
   width:100%;
+  position: relative;
+  height:65vh;
   h1{
     font-size: 3em;
-
   }
   p{
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }
 
@@ -37,17 +39,23 @@
 
 .menu-drinks {
   // margin-top: 10%;
-   margin-bottom: 10%;
+   //margin-bottom: 10%;
 }
 
 .contact-us{
-  text-align: center;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  .btn{
+    font-size: 1.2em;
+
+  }
 }
 
 
 .menu-photo {
   img{
-    height: 70vh;
+    max-height: 65vh;
   }
 }
 
