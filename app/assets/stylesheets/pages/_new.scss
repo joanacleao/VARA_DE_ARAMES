@@ -6,40 +6,23 @@
   flex-direction: column;
   height: 80vh;
   width: 100vw;
-  // background-image: image-url('/assets/background_form.png');
   background-repeat: no-repeat;
   background-size: 100%;
   overflow: hidden;
-    // background-color: #e9e6e5;
 }
-
 .form-horizontal{
-  // background-color: #e9e6e5;
-  // border: 1px solid #000000;
-  // border-radius: 3px;
   padding:2% 2% 0% 2%;
-
+  margin-bottom: 1%;
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  p{
-    // margin-bottom: 3%;
-  }
-
 }
 .form-horizontal:first-child {
-      margin-top: 1%;
-      padding-bottom: 0%;
-  }
-
-
-
+  margin-top: 1%;
+  padding-bottom: 0%;
+}
 select:focus {
   outline:none !important;
 }
-
-
-
 .form{
   display: flex;
   justify-content: space-between;
@@ -47,29 +30,23 @@ select:focus {
   width: auto;
   font-size: 0.9em;
   font-variant: all-petite-caps;
-
   select {
     background: white;
     option{
       background: white;
-       padding:12px 0px 10px 24px;
+      padding:12px 0px 10px 24px;
     }
   }
-
-// .form-list{
-// background-color: #33CC33;
-// }
-
   #contact_name{
     width: 40vw;
   }
   #contact_email{
     width: 40vw;
   }
-    #contact_phone{
+  #contact_phone{
     width: 15vw;
   }
-      #contact_localization{
+  #contact_localization{
     width: 20vw;
   }
 
@@ -83,72 +60,54 @@ select:focus {
     width: 10vw;
   }
   #contact_menu_id{
-      width: 15vw;
-
+    width: 15vw;
   }
 }
-
 .form-all{
-      width: 100vw;
-      display: flex;
-      justify-content: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
   p{
     font-size: 1em !important;
     font-variant: all-petite-caps;
   }
 }
-
-
 .field{
   font-size: 0.9em;
   font-variant: all-petite-caps;
-
-
 }
-
 .box{
   width: 100%;
   height: 60vh;
   overflow-x: scroll;
   overflow-y: scroll;
 }
-
-
 .box::-webkit-scrollbar {
   height: 7px;
   width: 7px;
 }
-
 .box::-webkit-scrollbar-track {
-
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-
 .box::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: rgba(0,0,0,0.8);
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
-
-
 .check-groups{
-    display: flex;
+  display: flex;
   width: 200%;
   overflow: hidden;
   z-index: 100;
-  // background-color:white;
 }
-
 .check-group{
   margin-right: 2%;
-
   p{
     text-align: center;
   }
 }
-
 .add-data{
   margin-top: 2%;
   margin-bottom: 2%;
@@ -160,21 +119,17 @@ select:focus {
     width: 40vw;
     height: 15vh;
   }
-
 }
-
 .title{
   display: flex;
   justify-content: flex-start;
   width: 80%;
 }
-
 .subtitle{
   display: flex;
   justify-content: flex-start;
   width:100%;
 }
-
 .enviar{
   display: inline-block;
   padding: 12px 18px;
@@ -192,10 +147,7 @@ select:focus {
     background: #000000;
   }
 }
-
 input::-webkit-datetime-edit{ color: #757575; }
-
-
 input[type="checkbox"]{
   -webkit-appearance: initial;
   appearance: initial;
@@ -203,39 +155,105 @@ input[type="checkbox"]{
   height: 10px;
   border: 1px solid #000000;
   background: white;
-
   position: relative;
 }
 input[type="checkbox"]:checked {
   background: black;
 }
 input[type="checkbox"]:checked:after {
-    /* Heres your symbol replacement - this is a tick in Unicode. */
-    content: "";
-    // color: #fff;
-    /* The following positions my tick in the center,
-     * but you could just overlay the entire box
-     * with a full after element with a background if you want to */
-    // position: absolute;
-    // left: 50%;
-    // top: 50%;
-    // -webkit-transform: translate(-50%,-50%);
-    // -moz-transform: translate(-50%,-50%);
-    // -ms-transform: translate(-50%,-50%);
-    // transform: translate(-50%,-50%);
-    /*
-     * If you want to fully change the check appearance, use the following:
-     * content: " ";
-     * width: 100%;
-     * height: 100%;
-     * background: blue;
-     * top: 0;
-     * left: 0;
-     */
-   }
-
-   .form-scroll{
-    overflow-y: scroll;
+  content: "";
+}
+.form-scroll{
+  overflow-y: scroll;
     // height: 80vh;
+  }
+
+  @media (max-width: 600px) {
+    body{
+      font-size: 10px;
+    }
+    .form-container{
+      top: 35vh;
+      height: 70vh;
+    }
+    .box{
+      height: 40vh;
+    }
+    .form-all{
+      background-color: #e8e1e1;
+    }
+
+    .col-xs-12{
+      padding: 0;
+    }
+    .form{
+      width: 70vw;
+      height: 30px;
+      align-items:center;
+
+      input{
+        font-size: 1.3em;
+        margin-bottom: 1%;
+      }
+      label{
+        font-size: 1.2em;
+      }
+      #contact_name{
+        width: 70vw;
+      }
+      #contact_email{
+        width: 70vw;
+      }
+      #contact_phone{
+        width: 25vw;
+      }
+      #contact_localization{
+        width: 39.5vw;
+      }
+
+      #contact_date{
+        width: 25vw;
+      }
+      #contact_n_pax{
+        width: 17vw;
+      }
+      #contact_n_ch{
+        width: 17vw;
+      }
+      #contact_menu_id{
+        width: 25vw;
+        height: 25px;
+      }
+    }
+    .form-horizontal{
+      background-color: rgba(232, 225, 225, 1);
+      padding: 5%;
+      font-size: 1.2em;
+    }
+    .form-horizontal:first-child {
+      padding-bottom: 5%;
+    }
+
+    .check-groups{
+      width: 400%;
+      border: 1px solid white;
+      border-top-style: none;
+      padding-left: 1%;
+    }
+    .check-group{
+      p{
+        background-color: white;
+      }
+    }
+    .enviar{
+      background-color: white;
+    }
+    .add-data{
+      height: 20vh;
+      justify-content: space-between;
+  #contact_dish_comment{
+    width: 60vw;
+  }
+}
   }
 
