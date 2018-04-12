@@ -1,0 +1,28 @@
+<div class="form-all">
+
+  <%= form_for @contact, html: { class: "form-horizontal center" }, url: { action: "create_small" } do |c| %>
+  <!--   <div class="title"><p>Preencha por favor os seguintes dados:</p></div> -->
+  <div class="col-xs-12">
+    <div class="form">
+      <%= c.text_field :name, placeholder:"Nome/Empresa"%>
+    </div >
+    <div class="form">
+      <%= c.text_field :email, placeholder:"Email" %>
+    </div >
+    <div class="form">
+      <%= c.text_field :phone , placeholder:"Telefone" %>
+      <%= c.text_field :localization, placeholder:"Local"  %>
+    </div>
+    <div class="form">
+     <%= c.date_field :date, as: :date %>
+     <%= c.text_field :n_pax, placeholder:"Adultos" %>
+     <%= c.text_field :n_ch, placeholder:"Crianças" %>
+   </div>
+   <div class="add-data">
+    <%= c.text_field :comment, placeholder:"Mensagem" %>
+    <%= c.submit value="Enviar", :class => 'enviar'%>
+  </div>
+</div>
+<%= c.hidden_field :menu_id, :value => 27%>
+<% end %>
+</div>

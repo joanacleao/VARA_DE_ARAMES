@@ -10,6 +10,9 @@ class PagesController < ApplicationController
 
  def contact
    @menus = Menu.all
+    @dishes = Dish.all
+    @contact = Contact.new
+    @contact_dish = ContactDish.new
  end
 
  def galery

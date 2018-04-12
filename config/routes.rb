@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   resources "contactdishes", only: [:new, :create]
 
   post 'contacts/precreate' , to: 'contacts#precreate'
+  get 'contacts/contact' , to: 'contacts#contact'
+  post 'contacts/create_small' , to: 'contacts#create_small'
 
 end

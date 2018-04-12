@@ -102,6 +102,9 @@ $easing: ease-in-out;
   width: 100%;
   height: 55vh;
   background-image: url(va_table.jpg);
+  background-size:cover;
+  // background-color: rgba(232, 225, 225, 1); - alternativa a imagem de fundo
+
   // * mostrar imagem escura com texto branco
    // background-image:
    //  linear-gradient(
