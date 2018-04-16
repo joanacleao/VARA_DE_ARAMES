@@ -11,9 +11,6 @@ class Contact < ApplicationRecord
   validates :n_ch, presence: true, numericality: { only_integer: true }, on: :create
 
   validates :menu_id, inclusion: { in: (eval (Menu.all.map(&:id).join ',').split(",").to_s.gsub('"', '')) }
-  # validates :menu_id, :inclusion => { :in => (Menu.all.map(&:id).join ',').split(",") }
-  # validates :menu_id, :inclusion => { :in => [27, 28] }
    validates :date, presence: true
 end
 
-# (Menu.all.map(&:name).join ',').split(",")
