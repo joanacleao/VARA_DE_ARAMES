@@ -8,6 +8,7 @@ class CreateContacts < ActiveRecord::Migration[5.1]
       t.string "n_ch"
       t.date "date"
       t.string "localization"
+      t.text "comment"
       t.references :menu, foreign_key: true
 
       t.timestamps
