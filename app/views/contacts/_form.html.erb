@@ -1,32 +1,73 @@
-<div class="form-all">
 
+<div class="form-all">
   <%= form_for @contact, html: { class: "form-horizontal center" }, url: { action: "precreate" } do |c| %>
-<!--   <div class="title"><p>Preencha por favor os seguintes dados:</p></div> -->
+  <!--   <div class="title"><p>Preencha por favor os seguintes dados:</p></div> -->
   <div class="col-xs-12">
-  <div class="form">
-    <%= c.text_field :name, placeholder:"Nome/Empresa"%>
-      </div >
-        <div class="form">
-    <%= c.text_field :email, placeholder:"Email" %>
-     </div >
-       <div class="form">
-    <%= c.text_field :phone , placeholder:"Telefone" %>
-    <%= c.text_field :localization, placeholder:"Local"  %>
+    <div class="form">
+      <%= c.text_field :name, placeholder:"Nome/Empresa" %>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:name].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:name].first %></span>
+      <% end %>
+      <% end %>
+    </div >
+    <div class="form">
+      <%= c.text_field :email, placeholder:"Email"%>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:email].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:email].first %></span>
+      <% end %>
+      <% end %>
+    </div >
+    <div class="form">
+      <%= c.text_field :phone , placeholder:"Telefone"%>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:phone].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:phone].first %></span>
+      <% end %>
+      <% end %>
+      <%= c.text_field :localization, placeholder:"Local"%>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:localization].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:localization].first %></span>
+      <% end %>
+      <% end %>
     </div>
     <div class="form">
-       <%= c.date_field :date, as: :date %>
-    <%= c.text_field :n_pax, placeholder:"Adultos" %>
-      <%= c.text_field :n_ch, placeholder:"Crianças" %>
-       </div>
-  <div class="form">
-    <%= c.label :menu_id, ' seleccione para continuar:' %>
+     <%= c.date_field :date, as: :date%>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:date].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:date].first %></span>
+      <% end %>
+      <% end %>
+     <%= c.text_field :n_pax, placeholder:"Adultos"%>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:n_pax].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:n_pax].first %></span>
+      <% end %>
+      <% end %>
+     <%= c.text_field :n_ch, placeholder:"Crianças" %>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:n_ch].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:n_ch].first %></span>
+      <% end %>
+      <% end %>
+   </div>
+   <div class="form">
+   <!--  <select required="require" name="contact[menu_id]" id="contact_menu_id">
+      <option disabled selected value="" >Tipo de Evento</option>
+      <option value="27">Cocktail</option>
+      <option value="28">Light Lunch</option>
+      <option value="29">Coffee Break</option>
+      <option value="30">After Work</option>
+    </select> -->
     <%= c.select :menu_id, options_from_collection_for_select(@menus, 'id', 'name' , :selected => c.object.menu_id, :class =>"form-list") , include_blank: "Tipo evento"%>
+    <%= c.submit value="Continuar"%>
   </div >
-  </div>
-  <% end %>
+
+
 </div>
-
-
-
+<% end %>
+</div>
 
 

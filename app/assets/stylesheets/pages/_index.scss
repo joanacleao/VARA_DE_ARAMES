@@ -88,8 +88,11 @@
 }
 
 @media (max-width: 600px) {
+    body{
+    font-size: 10px;
+  }
   .index-all{
-        height: 67vh;
+        height: 70vh;
         flex-direction:column;
         top:30vh;
         margin-left: 2%;

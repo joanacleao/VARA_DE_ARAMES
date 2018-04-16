@@ -4,15 +4,7 @@ class ContactsController < ApplicationController
     @dishes = Dish.all
     @contact = Contact.new
     @contact_dish = ContactDish.new
-
   end
-
-  def contact
-   @menus = Menu.all
-   @dishes = Dish.all
-   @contact = Contact.new
-   @contact_dish = ContactDish.new
- end
 
  def precreate
   @dishes = Dish.all
@@ -24,9 +16,15 @@ class ContactsController < ApplicationController
   @date = contact_params[:date]
   @location = contact_params[:localization]
   @menu_id = contact_params[:menu_id]
+  if contact_params[:menu_id] != ""
   @menu_dishes = Menu.find(contact_params[:menu_id]).menu_dishes
+  end
   @menus = Menu.all
   @contact = Contact.new(contact_params)
+  unless @contact.valid?
+    @error_message = @contact.errors.first
+  end
+
   @contact_dish = ContactDish.new
   render :new, menu_id: @menu_id
 
@@ -34,6 +32,7 @@ end
 
 
 def create
+    @menus = Menu.all
   @contact = Contact.new(contact_dish_params)
 
   if @contact.save
@@ -48,6 +47,13 @@ def create
     render :new
   end
 end
+
+def contact
+   @menus = Menu.all
+   @dishes = Dish.all
+   @contact = Contact.new
+   @contact_dish = ContactDish.new
+ end
 
 def create_small
   @menus = Menu.all

@@ -31,3 +31,42 @@
 
 en:
   hello: "Hello world"
+
+  activerecord:
+    attributes:
+      contact:
+        name: "Nome/Empresa"
+        email: "E-mail"
+        n_pax: "Adultos"
+        n_ch: "Crianças"
+        menu: "Evento"
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              blank: "obrigatório"
+            email:
+              blank: "obrigatório"
+              invalid: "inválido"
+            phone:
+              blank: "obrigatório"
+              invalid: "Inválido"
+              not_a_number: "Inválido"
+              too_short: "inválido"
+            localization:
+              blank: "obrigatório"
+            n_pax:
+              blank: "obrigatório"
+              not_a_number: "Inválido"
+            n_ch:
+              blank: "obrigatório"
+              not_a_number: "Inválido"
+            menu_id:
+              blank: "obrigatório"
+              inclusion: "obrigatório!"
+            date:
+              blank: "obrigatório"
+              invalid: "inválido"
+
+
