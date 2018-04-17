@@ -1,0 +1,76 @@
+.container{
+  position: absolute;
+  top: 20vh;
+  padding: 5%;
+  width: 100%;
+}
+.card {
+  height: 40vh;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  margin-bottom: 15px;
+
+}
+.card1{
+    background-image:  url(1.jpg);
+}
+.card2 {
+  background-image:  url(2.jpg);
+}
+.card3 {
+  background-image:  url(3.jpg);
+}
+.card4 {
+  background-image:  url(4.jpg);
+}
+.card5 {
+  background-image:  url(5.jpg);
+}
+.card6 {
+  background-image:  url(6.jpg);
+}
+.card7 {
+  background-image:  url(7.jpg);
+}
+.card8 {
+  background-image:  url(8.jpg);
+}
+.card9 {
+  background-image:  url(9.jpg);
+}
+.card10 {
+  background-image:  url(10.jpg);
+}
+.card11 {
+  background-image:  url(11.jpg);
+}
+.card12 {
+  background-image:  url(12.jpg);
+}
+.card13 {
+  background-image:  url(13.jpg);
+}
+.card14 {
+  background-image:  url(14.jpg);
+}
+.card15 {
+  background-image:  url(15.jpg);
+}
+.card16 {
+  background-image:  url(16.jpg);
+}
+
+@media (max-width: 600px) {
+    body{
+    font-size: 10px;
+  }
+  .container{
+    top:30vh
+  }
+  .card {
+  height: 20vh;}
+
+}

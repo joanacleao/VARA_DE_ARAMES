@@ -32,6 +32,13 @@
       font-size: 0.8em;
       text-decoration: none;
     }
+
+  a:active, a:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none
+}
+button:focus {outline:0;}
   }
 
 .menu-small-left{
