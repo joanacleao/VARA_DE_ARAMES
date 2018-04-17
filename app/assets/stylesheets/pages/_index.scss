@@ -34,8 +34,13 @@
   margin-left: 0.5%;
   margin-bottom: 0%;
   margin-top: 1%;
-
 }
+
+.index-menu-content{
+  font-size: 0.8em;
+}
+
+
 .index-menu-content:first-child{
   margin-left: 1%;
 
@@ -73,8 +78,6 @@ background-image: url(brunch.jpg);
     margin:auto;
 
 }
-
-
 
 .index-box::-webkit-scrollbar {
     height: 7px;
