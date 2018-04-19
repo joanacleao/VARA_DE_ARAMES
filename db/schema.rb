@@ -32,10 +32,10 @@ ActiveRecord::Schema.define(version: 20180322175318) do
     t.string "n_ch"
     t.date "date"
     t.string "localization"
+    t.text "comment"
     t.bigint "menu_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "comment"
     t.index ["menu_id"], name: "index_contacts_on_menu_id"
   end
 

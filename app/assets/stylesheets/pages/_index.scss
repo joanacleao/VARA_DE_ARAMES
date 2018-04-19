@@ -5,6 +5,15 @@
 @import "contact";
 @import "galery";
 
+body{
+  font-variant: all-petite-caps;
+
+}
+
+li {
+  list-style-type: none;
+}
+
 .index-all{
   font-variant: all-petite-caps;
   position: absolute;

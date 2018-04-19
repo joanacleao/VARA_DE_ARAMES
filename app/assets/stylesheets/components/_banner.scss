@@ -25,9 +25,10 @@
     z-index: 100;
     a{
       color: black;
-      font-size: 0.8em;
+      font-size: 1.2em;
       text-decoration: none;
       letter-spacing: 0.1em;
+
     }
   a:active, a:focus {
   outline: 0;
@@ -43,7 +44,8 @@ button:focus {outline:0;}
     align-items: center;
     width: 50%;
     a{
-      padding: 0 4%;
+      padding: 0 20%;
+      font-weight: 300;
     }
   }
 
@@ -56,13 +58,15 @@ button:focus {outline:0;}
     height: 70vh;
     a {
       padding: 15% 15%;
+      font-size: 0.8em;
     }
   }
 .dropdown {
     position: relative;
-    display: inline-block;
-    padding: 0 4%;
-    transform: translateY(0%);
+    width: auto;
+    // display: inline-block;
+    //padding: 0 4%;
+    // transform: translateY(0%);
     button{
       cursor: default;
     }
@@ -70,23 +74,23 @@ button:focus {outline:0;}
     a{
       font-variant: all-petite-caps;
     }
-       line-height: 0.8em;
+       // line-height: 0.8em;
   }
 
-  .dropbtn {
-    background-color: Transparent;
-    color: black;
-    padding: 0;
-    font-size: 0.8em;
-    border: none;
-    letter-spacing: 0.1em;
-    line-height: 0.8em;
-  }
+  // .dropbtn {
+  //   background-color: Transparent;
+  //   color: black;
+
+  //   font-size: 0.8em;
+  //   border: none;
+  //   letter-spacing: 0.1em;
+  // }
+
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 160px;
+    min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -105,7 +109,10 @@ button:focus {outline:0;}
 
   .dropdown:hover .dropdown-content {
     display: block;
+  }
 
+   .dropdown .dropbtn .static:hover .dropdown-content{
+    display:none;
   }
 
   .dropdown-submenu {
@@ -138,6 +145,9 @@ button:focus {outline:0;}
     border-radius: 0px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     margin:0;
+    >li > a{
+     font-weight: 300;
+    }
   }
 
   @media (max-width: 768px) {

@@ -211,12 +211,72 @@ menu_dish21.menu = menu4
 menu_dish21.dish = dish55
 menu_dish21.save!
 
+menu_dish22 = MenuDish.new
+menu_dish22.menu = menu1
+menu_dish22.dish = dish61
+menu_dish22.save!
 
+menu_dish23 = MenuDish.new
+menu_dish23.menu = menu1
+menu_dish23.dish = dish63
+menu_dish23.save!
 
+menu_dish24 = MenuDish.new
+menu_dish24.menu = menu1
+menu_dish24.dish = dish64
+menu_dish24.save!
 
+menu_dish25 = MenuDish.new
+menu_dish25.menu = menu1
+menu_dish25.dish = dish65
+menu_dish25.save!
 
+menu_dish26 = MenuDish.new
+menu_dish26.menu = menu2
+menu_dish26.dish = dish61
+menu_dish26.save!
 
+menu_dish27 = MenuDish.new
+menu_dish27.menu = menu2
+menu_dish27.dish = dish63
+menu_dish27.save!
 
+menu_dish28 = MenuDish.new
+menu_dish28.menu = menu2
+menu_dish28.dish = dish64
+menu_dish28.save!
 
+menu_dish29 = MenuDish.new
+menu_dish29.menu = menu2
+menu_dish29.dish = dish65
+menu_dish29.save!
 
+menu_dish30 = MenuDish.new
+menu_dish30.menu = menu3
+menu_dish30.dish = dish61
+menu_dish30.save!
 
+menu_dish31 = MenuDish.new
+menu_dish31.menu = menu3
+menu_dish31.dish = dish63
+menu_dish31.save!
+
+menu_dish32 = MenuDish.new
+menu_dish32.menu = menu3
+menu_dish32.dish = dish64
+menu_dish32.save!
+
+menu_dish33 = MenuDish.new
+menu_dish33.menu = menu4
+menu_dish33.dish = dish61
+menu_dish33.save!
+
+menu_dish34 = MenuDish.new
+menu_dish34.menu = menu4
+menu_dish34.dish = dish63
+menu_dish34.save!
+
+menu_dish35 = MenuDish.new
+menu_dish35.menu = menu4
+menu_dish35.dish = dish64
+menu_dish35.save!
