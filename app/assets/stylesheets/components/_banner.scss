@@ -35,7 +35,6 @@
   border: none;
   -moz-outline-style: none
 }
-button:focus {outline:0;}
   }
 
   .menu-left{
@@ -44,7 +43,7 @@ button:focus {outline:0;}
     align-items: center;
     width: 50%;
     a{
-      padding: 0 20%;
+      padding: 0 5%;
       font-weight: 300;
     }
   }
@@ -64,17 +63,14 @@ button:focus {outline:0;}
 .dropdown {
     position: relative;
     width: auto;
-    // display: inline-block;
-    //padding: 0 4%;
-    // transform: translateY(0%);
-    button{
-      cursor: default;
-    }
-
     a{
       font-variant: all-petite-caps;
     }
-       // line-height: 0.8em;
+  .dropdown-toggle{
+    padding: 0;
+    cursor: default;
+  }
+  padding: 0 5%;
   }
 
   // .dropbtn {
@@ -118,7 +114,7 @@ button:focus {outline:0;}
   .dropdown-submenu {
 
     position: relative;
-    a{
+    >a{
     cursor: default;
   }
   }

@@ -8,7 +8,10 @@
       </div>
       <% @menu.menu_dishes.each do |dish| %>
       <div class="menu-dishes">
+        <% unless ["Chás", "Café Expresso", "Vinho Branco | Vinho Tinto", "Água Mineral"].include? dish.dish.name    %>
         <p><%= dish.dish.name %></p>
+
+      <% end %>
       </div>
       <% end %>
       <div class="menu-drinks">
