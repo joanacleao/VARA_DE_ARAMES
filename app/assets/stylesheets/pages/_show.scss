@@ -75,13 +75,11 @@ $easing: ease-in-out;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body{
     font-size: 10px;
   }
-  .menu-content {
-    height:50vh;
-  }
+
   .menu-photo {
     display:none;
   }
@@ -145,3 +143,12 @@ $easing: ease-in-out;
   // color: white; - para *
 }
 }
+@media (min-width: 601px) and (max-width: 768px) {
+ body{
+    font-size: 14px;
+  }
+  .menu-content{
+    margin: 10%;
+  }
+}
+

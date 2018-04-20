@@ -1,4 +1,4 @@
-// Import page-specific CSS files here.
+  // Import page-specific CSS files here.
 @import "home";
 @import "show";
 @import "new";
@@ -115,23 +115,64 @@ background-image: url(brunch.jpg);
         flex-direction:column;
         top:30vh;
         margin-left: 2%;
+        margin-top: 5%;
+        align-items:center;
   }
   .index-scroll{
-    width: 400%;
+    width: 700%;
   }
   .index-menu{
-    width: 50vw;
+    width: 60vw;
+    font-size: 1.2em;
   }
   .index-box{
-    width:97%;
+    width:80%;
+    height: 50vh;
   }
   .index-menu-content:first-child {
     margin-left: 0%;
 }
-
+.index-menu-photo{
+  img{
+    width: 20vw;
+    height:auto;
+  }
+}
+.index-contact-us a{
+  font-size: 1.2em;
+}
   [data-wipe] {
     margin-top: 5%;
   }
+}
 
+@media (min-width: 601px) and (max-width: 768px) {
+ body{
+    font-size: 18px;
+  }
+  .index-all{
+  flex-direction: column;
+  margin-bottom:0;
+  }
+  .index-box{
+    margin:5%;
+  }
+  .index-scroll{
+    width: 500%;
+  }
+  .index-menu-photo{
+  img{
+    width: auto;
+    height:60vh;
+  }
+}
+  .index-menu{
+        width: 60vw;
+  }
+
+  .index-menu-content:first-child{
+  margin-left: 0%;
+
+}
 
 }

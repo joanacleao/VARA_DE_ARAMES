@@ -1,5 +1,5 @@
 .background-image{
-  background-image: image-url('/assets/background.png');
+  background-image: image-url('/assets/Desktop.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -57,7 +57,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   body{
     font-size: 10px;
   }
@@ -74,10 +74,25 @@
   position: relative;
   a{
   top:53%;
-
     margin: 0 auto;
-
   }
 }
-
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .background-image {
+   background-image: image-url('/assets/background_tablet.png');
+ }
+ .home-contact-us{
+  bottom: 0;
+  left: 0;
+  margin-left: 0%;
+  margin-bottom: 0%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  a{
+  top:50%;
+    margin: 0 auto;
+  }
+}
 }
