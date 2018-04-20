@@ -186,5 +186,11 @@ img.hover-shadow {
   }
   .card {
   height: 20vh;}
-
+.mySlides {
+  height: 50vh;
+}
+#myModal.modal{
+  display: flex;
+  flex-direction:column;
+}
 }
