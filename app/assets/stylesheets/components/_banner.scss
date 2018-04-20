@@ -49,6 +49,9 @@ li a:active{
       padding: 0 5%;
       font-weight: 300;
     }
+    a:focus {
+  font-size: 1.4em;
+}
   }
 
   .menu-right{
@@ -62,6 +65,7 @@ li a:active{
       padding: 15% 15%;
       font-size: 0.8em;
     }
+
   }
 .dropdown {
     position: relative;
