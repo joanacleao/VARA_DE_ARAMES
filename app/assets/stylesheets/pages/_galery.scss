@@ -193,4 +193,25 @@ img.hover-shadow {
   display: flex;
   flex-direction:column;
 }
+.prev,
+.next {
+  font-size: 30px;
+}
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .card{
+    height: 20vh;
+  }
+  .mySlides {
+  height: 65vh;
+}
+#myModal.modal{
+  display: flex;
+  flex-direction:column;
+}
+.prev,
+.next {
+  font-size: 40px;
+}
 }
