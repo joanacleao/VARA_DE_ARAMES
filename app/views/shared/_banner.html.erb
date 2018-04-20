@@ -18,7 +18,7 @@
           <%= link_to "VA à descoberta", dishes_index_path %>
       </div>
     </li>
-        <a href="/galery">GALERIA</a>
+        <a href="/galery" onclick="myFunction()" id="foo">GALERIA</a>
         <a href="/about">FILOSOFIA</a>
         <a href="/contacts/contact">CONTACTOS</a>
   </div>
@@ -28,3 +28,9 @@
         <a href="mailto:varadearames@gmail.com"><i class="fas fa-envelope"></i></a>
       </div>
 </div>
+
+<script>
+  function myFunction() {
+    document.getElementById('foo').style.cssText = 'color: white';
+}
+</script>
