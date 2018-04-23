@@ -62,7 +62,7 @@
       <option value="30">After Work</option>
     </select> -->
     <%= c.select :menu_id, options_from_collection_for_select(@menus, 'id', 'name' , :selected => c.object.menu_id, :class =>"form-list") , include_blank: "Tipo evento"%>
-    <%= c.submit value="Continuar"%>
+    <%= c.submit value="Continuar", :class => "continuar" %>
   </div >
 
 

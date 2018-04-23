@@ -41,6 +41,26 @@ select:focus {
       padding:12px 0px 10px 24px;
     }
   }
+    .continuar{
+  display: inline-block;
+  padding: 4px 6px;
+  text-decoration: none;
+  position: relative;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #000000;
+  overflow: hidden;
+  background-color:white;
+  &:hover {
+    color: #F1F1F2;
+    background: #000000;
+  }
+
+    }
+
   #contact_name{
     width: 40vw;
   }
@@ -146,6 +166,7 @@ select:focus {
   text-align: left;
   color: #000000;
   overflow: hidden;
+  background-color:white;
   &:hover {
     color: #F1F1F2;
     background: #000000;
@@ -198,6 +219,7 @@ input[type="checkbox"]:checked:after {
       input{
         font-size: 1.3em;
         margin-bottom: 1%;
+
       }
       label{
         font-size: 1.2em;
@@ -261,3 +283,79 @@ input[type="checkbox"]:checked:after {
 }
   }
 
+ @media (min-width: 601px) and (max-width: 768px) {
+    body{
+    font-size: 18px;
+  }
+  .form-container{
+      background-color: #e8e1e1;
+  }
+  .contact-container{
+    flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+ .form-all{
+        justify-content: center;
+        width: 100%;
+      background-color: #e8e1e1;
+    }
+    .form{
+      width: 70vw;
+    #contact_name{
+        width: 70vw;
+      }
+      #contact_email{
+        width: 70vw;
+      }
+      #contact_phone{
+        width: 25vw;
+      }
+      #contact_localization{
+        width: 39.5vw;
+      }
+
+      #contact_date{
+        width: 25vw;
+      }
+      #contact_n_pax{
+        width: 17vw;
+      }
+      #contact_n_ch{
+        width: 17vw;
+      }
+      #contact_menu_id{
+        width: 25vw;
+        height: 25px;
+      }
+    }
+    .add-data{
+    #contact_dish_comment{
+  width: 60vw;
+    height: 10vh;
+  }
+}
+.box{
+  height: 40vh;
+  }
+.subtitle{
+  p{
+    font-weight:bold;
+  }
+}
+  .check-groups{
+      width: 300%;
+      border: 1px solid white;
+      border-top-style: none;
+      padding-left: 1%;
+    }
+    .check-group{
+      p{
+        background-color: white;
+      }
+    }
+    label{
+      font-weight: normal;
+    }
+
+}
