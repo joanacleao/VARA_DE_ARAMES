@@ -128,9 +128,9 @@
     // border-radius: 0 6px 6px 6px;
   }
 
-  .dropdown-submenu:hover>.dropdown-menu {
-    display: block;
-  }
+  // .dropdown-submenu:hover>.dropdown-menu {
+  //   display: block;
+  // }
 
   // .dropdown-submenu>a:after {
   //   display: block;
@@ -216,7 +216,9 @@
     .dropdown-menu{
       font-size: 1em;
     }
+
     .dropdown-content a {
       font-size:1.2em;
-    }
+    min-width: 150px;
+          }
   }
