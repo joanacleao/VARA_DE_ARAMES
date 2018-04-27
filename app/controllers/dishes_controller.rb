@@ -8,6 +8,7 @@ class DishesController < ApplicationController
     @dishes_acomp = Dish.where(meal_type:"Para Acompanhar")
     @dishes_ter = Dish.where(meal_type:"Para Terminar")
     @dishes_bbr = Dish.where(meal_type:"Para Beber")
+    @dishes_all = [@dishes_ac, @dishes_pet, @dishes_aj, @dishes_acomp, @dishes_ter, @dishes_bbr]
 
   end
 

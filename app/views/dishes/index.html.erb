@@ -1,101 +1,98 @@
 <%= render 'shared/banner_small' %>
-  <div class="index-all">
-    <div class="index-box">
-      <div class = "index-scroll">
-        <div class="index-menu-content">
-          <div class="index-opacity"></div>
+
+
+<div class="index-content">
+  <div id="myModal2" class="modal">
+    <!-- <span class="close cursor" onclick="closeModal()">&times;</span> -->
+    <div class="modal-content" id="myContent">
+      <div class="mySlides" id="slides-index">
+        <!-- <div class="index-opacity" style="background-image: url(/assets/brunch.jpg);"></div> -->
+        <div class="index-menu-flex">
           <div class="index-menu-photo">
-            <%= image_tag("/assets/acordar_all", alt: "acordar") %>
+            <%= image_tag("/assets/acordar", alt: "acordar") %>
           </div>
           <div class="index-menu">
             <div class="index-menu-title">
-              <h1><%= @dishes_ac.first.meal_type %></h1>
+              <h1><%= @dishes_all.first.first.meal_type %></h1>
             </div>
-            <div class="index-menu-dishes">
-              <% @dishes_ac.each do |dish|  %>
-              <p><%= dish.name %></p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="index-menu-content">
-          <div class="index-menu-photo">
-            <%= image_tag("/assets/petiscar_all.JPG", alt: "petiscar") %>
-          </div>
-          <div class="index-menu">
-            <div class="index-menu-title">
-              <h1><%= @dishes_pet.first.meal_type %></h1>
-            </div>
-            <div class="index-menu-dishes">
-              <% @dishes_pet.each do |dish|  %>
-              <p><%= dish.name %></p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="index-menu-content">
-          <div class="index-menu-photo">
-            <%= image_tag("/assets/almocar_all.JPG", alt: "almocar/jantar") %>
-          </div>
-          <div class="index-menu">
-            <div class="index-menu-title">
-              <h1><%= @dishes_aj.first.meal_type %></h1>
-            </div>
-            <div class="index-menu-dishes">
-              <% @dishes_aj.each do |dish|  %>
-              <p><%= dish.name %></p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="index-menu-content">
-          <div class="index-menu-photo">
-            <%= image_tag("/assets/acompanhar_all.jpg", alt: "acordar") %>
-          </div>
-          <div class="index-menu">
-            <div class="index-menu-title">
-              <h1><%= @dishes_acomp.first.meal_type %></h1>
-            </div>
-            <div class="index-menu-dishes">
-              <% @dishes_acomp.each do |dish|  %>
-              <p><%= dish.name %></p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="index-menu-content">
-          <div class="index-menu-photo">
-            <%= image_tag("/assets/terminar_all.JPG", alt: "terminar") %>
-          </div>
-          <div class="index-menu">
-            <div class="index-menu-title">
-              <h1><%= @dishes_ter.first.meal_type %></h1>
-            </div>
-            <div class="index-menu-dishes">
-              <% @dishes_ter.each do |dish|  %>
-              <p><%= dish.name %></p>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="index-menu-content">
-          <div class="index-menu-photo">
-            <%= image_tag("/assets/terminar_all.JPG", alt: "beber") %>
-          </div>
-          <div class="index-menu">
-            <div class="index-menu-title">
-              <h1><%= @dishes_bbr.first.meal_type %></h1>
-            </div>
-            <div class="index-menu-dishes">
-              <% @dishes_bbr.each do |dish|  %>
-              <p><%= dish.name %></p>
-              <% end %>
+            <div class="index-menu-dishes-both">
+              <div class="index-menu-dishes">
+                <% @dishes_all.first[0..10].each do |dish|  %>
+                <p><%= dish.name %></p>
+                <% end %>
+              </div>
+              <div class="index-menu-dishes">
+                <% unless @dishes_all.first[11..-1] == nil %>
+                <% @dishes_all.first[11..-1].each do |dish|  %>
+                <p><%= dish.name %></p>
+                <% end %>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="index-contact-us">
-      <a href="/contacts/new" class="btn" data-wipe="Consulte-nos">Consulte-nos</a>
+      <% j=100 %>
+      <% @dishes_all[1..-1].each do |i| %>
+      <div class="mySlides" id="slides-index" style="display: none">
+        <!-- <div class="index-opacity" style="background-image: url(/assets/brunch.jpg);"></div> -->
+        <div class="index-menu-flex">
+          <div class="index-menu-photo">
+            <img src="/assets/<%= j%>.JPG"  class="decoberta">
+          <% j=j+1 %>
+          </div>
+          <div class="index-menu">
+            <div class="index-menu-title">
+              <h1><%= i.first.meal_type %></h1>
+            </div>
+            <div class="index-menu-dishes-both">
+              <div class="index-menu-dishes">
+                <% i[0..10].each do |dish|  %>
+                <p><%= dish.name %></p>
+                <% end %>
+              </div>
+              <div class="index-menu-dishes">
+                <% unless i[11..-1] == nil %>
+                <% i[11..-1].each do |dish|  %>
+                <p><%= dish.name %></p>
+                <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
   </div>
+  <div class="index-contact-us">
+    <a href="/contacts/new" class="btn" data-wipe="Consulte-nos">Consulte-nos</a>
+  </div>
+</div>
+
+<script>
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+      }
+    </script>

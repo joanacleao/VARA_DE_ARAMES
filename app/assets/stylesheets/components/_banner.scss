@@ -60,9 +60,10 @@ li a:active{
     align-items: center;
     width: auto;
     flex-direction: column;
-    height: 70vh;
+    height: 73vh;
     a {
-      padding: 15% 15%;
+      // padding: 15% 15%;
+      line-height: 180%;
       font-size: 0.8em;
     }
 

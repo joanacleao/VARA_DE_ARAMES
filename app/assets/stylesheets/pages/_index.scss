@@ -34,7 +34,7 @@ li {
   width: 300%;
   overflow: hidden;
   z-index: 100;
-
+  height: 150%;
 }
 
 .index-menu-content{
@@ -43,10 +43,13 @@ li {
   margin-left: 0.5%;
   margin-bottom: 0%;
   margin-top: 1%;
+  //acrescentei para background foto
+  position: relative;
 }
 
 .index-menu-content{
   font-size: 0.8em;
+      height: 80vh;
 }
 
 
@@ -59,14 +62,25 @@ li {
   flex-direction: column;
   margin-left: 1%;
   width: 25vw;
-
+//acrescentei para backgorund
+// position: absolute;
+//     top: 2%;
+//     left: 2%;
 
 }
-
+.index-menu-dishes{
+  p{
+    // font-weight:bold;
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+  }
+}
 .index-menu-photo{
+
   img{
     // height: 90vh;
     // width: 8vw;
+    // display:none;
   }
 }
 .index-menu-title h1{
@@ -78,15 +92,16 @@ li {
 }
 
 .index-opacity{
-background-image: url(brunch.jpg);
-  background-size:cover;
-  opacity: .4;
+// background-image: url(brunch.jpg);
+  // background-size:cover;
+  // opacity: .4;
+  // width: 70vw;
 }
 
-.index-contact-us{
-    margin:auto;
+// .index-contact-us{
+//     margin:auto;
 
-}
+// }
 
 .index-box::-webkit-scrollbar {
     height: 7px;
@@ -105,6 +120,75 @@ background-image: url(brunch.jpg);
     background: rgba(0,0,0,0.8);
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
+
+.index-content{
+  position: absolute;
+  top:20vh;
+  height:80vh;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+
+}
+#myModal2.modal{
+  display: flex;
+  top: 20vh;
+  width:80vw;
+  z-index:1;
+
+}
+#myContent{
+  background-color: white;
+  border:none;
+  margin:0;
+  width: 80vw;
+  .prev, .next{
+    color:black;
+        margin-top: -3%;
+  }
+}
+.index-menu-flex{
+  display:flex !important;
+      justify-content: center;
+    margin-top: 4%;
+    width: 70vw;
+  .index-menu-photo{
+    img{
+      height: 70vh;
+    }
+  }
+
+  .index-menu{
+        width: 60vw;
+  }
+  .index-menu-title{
+    h1{
+      margin-bottom: 4%;
+    }
+  }
+  .index-menu-dishes-both{
+    display:flex;
+        width: 60vw;
+  }
+  .index-menu-dishes{
+    width: 30vw;
+  }
+  :first-child{
+    margin-right: 1%;
+  }
+}
+.index-contact-us{
+  position: absolute;
+  top:0;
+  right:0;
+  height:80vh;
+  width: 20vw;
+  text-align: center;
+  display: flex;
+align-items: center;
+    justify-content: center;
+}
+
 
 @media (max-width: 600px) {
     body{

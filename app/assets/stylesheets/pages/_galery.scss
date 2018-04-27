@@ -3,6 +3,7 @@
   top: 20vh;
   padding: 5%;
   width: 100%;
+  overflow: scroll;
 }
 .card {
   height: 40vh;
@@ -64,10 +65,10 @@
 }
 
 /* The Modal (background) */
-.modal {
+#myModal {
   display: none;
   position: fixed;
-  z-index: 100;
+  z-index: 1001;
   padding-top: 3%;
   left: 0;
   top: 0;
@@ -86,6 +87,11 @@
   background-color: black;
   display: flex;
   justify-content: center;
+
+img {
+height: 90vh;
+  // margin-bottom: -4px;
+}
 }
 
 /* The Close Button */
@@ -148,11 +154,6 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-img {
-height: 90vh;
-  // margin-bottom: -4px;
-}
-
 .caption-container {
   text-align: center;
   background-color: black;
@@ -175,6 +176,9 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.col-sm-4{
+padding-left: 0 !important;
 }
 
 @media (max-width: 600px) {
