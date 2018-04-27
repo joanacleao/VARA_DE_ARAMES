@@ -189,46 +189,106 @@ align-items: center;
     justify-content: center;
 }
 
+.index-menu-dishes-mobile{
+  display: none;
+}
 
 @media (max-width: 600px) {
     body{
     font-size: 10px;
+    }
+  .index-content{
+    top:35vh;
+        height: 50vh;
+
   }
-  .index-all{
-        height: 70vh;
-        flex-direction:column;
-        top:30vh;
-        margin-left: 2%;
-        margin-top: 5%;
-        align-items:center;
+  #myModal2.modal{
+  z-index: 1000;
+  top:35vh;
+  height: 50vh;
+    width: 100%;
+    overflow-y: initial !important;
   }
-  .index-scroll{
-    width: 700%;
+  #myContent{
+      width: 100%;
+              box-shadow: none;
+  .prev, .next{
+    position:fixed;
+    top: 60vh;
   }
-  .index-menu{
+  }
+  .index-menu-dishes{
+  display:none !important;
+  height:0;
+  }
+  .index-menu-dishes-mobile{
+  display:block;
+  }
+  .index-menu-flex{
+    height: auto;
+    margin-top: 0%;
+    .index-menu-photo{
+      position: fixed;
+      left: 10%;
+      img{
+        height: 50vh;
+      }
+    }
+      .index-menu-title{
+          position: fixed;
+    left: 35% !important;
     width: 60vw;
-    font-size: 1.2em;
-  }
-  .index-box{
-    width:80%;
-    height: 50vh;
-  }
-  .index-menu-content:first-child {
-    margin-left: 0%;
-}
-.index-menu-photo{
-  img{
-    width: 20vw;
-    height:auto;
-  }
-}
-.index-contact-us a{
-  font-size: 1.2em;
-}
-  [data-wipe] {
-    margin-top: 5%;
+    background-color:white;
+    z-index:1000;
+    }
+
+    .index-menu-dishes-both{
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    overflow-y: auto;
+    }
+    .index-menu-dishes-mobile{
+    overflow-y: auto;
+    width: 50vw;
+    }
   }
 }
+//   .index-all{
+//         height: 70vh;
+//         flex-direction:column;
+//         top:30vh;
+//         margin-left: 2%;
+//         margin-top: 5%;
+//         align-items:center;
+//   }
+//   .index-scroll{
+//     width: 700%;
+//   }
+//   .index-menu{
+//     width: 60vw;
+//     font-size: 1.2em;
+//   }
+//   .index-box{
+//     width:80%;
+//     height: 50vh;
+//   }
+//   .index-menu-content:first-child {
+//     margin-left: 0%;
+// }
+// .index-menu-photo{
+//   img{
+//     width: 20vw;
+//     height:auto;
+//   }
+// }
+// .index-contact-us a{
+//   font-size: 1.2em;
+// }
+//   [data-wipe] {
+//     margin-top: 5%;
+//   }
+
 
 @media (min-width: 601px) and (max-width: 768px) {
  body{

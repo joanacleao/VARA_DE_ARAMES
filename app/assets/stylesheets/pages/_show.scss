@@ -1,14 +1,8 @@
 .menu-all{
   position: absolute;
-  // top:20vh;
-  // width: 100%;
-  // height: 80vh;
   padding: 2% 12% 2% 12%;
   display:flex;
-  // justify-content: space-between;
   background-color: white;
-
-// acrescentado para novo layout igual mobile
   justify-content: center;
     top:25vh;
     width: 100%;
@@ -110,8 +104,7 @@ $easing: ease-in-out;
     width: 100%;
     height: 55vh;
     padding: 0;
-
-    z-index: 1;
+    z-index: 100;
   // background-image: image-url('/assets/va_table.jpg');
   // background-color:rgba(255,0,0,0.5);
 }

@@ -28,6 +28,11 @@
                 <% end %>
                 <% end %>
               </div>
+              <div class="index-menu-dishes-mobile">
+                <% @dishes_all.first.each do |dish|  %>
+                <p><%= dish.name %></p>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
@@ -39,7 +44,7 @@
         <div class="index-menu-flex">
           <div class="index-menu-photo">
             <img src="/assets/<%= j%>.JPG"  class="decoberta">
-          <% j=j+1 %>
+            <% j=j+1 %>
           </div>
           <div class="index-menu">
             <div class="index-menu-title">
@@ -56,6 +61,11 @@
                 <% i[11..-1].each do |dish|  %>
                 <p><%= dish.name %></p>
                 <% end %>
+                <% end %>
+              </div>
+              <div class="index-menu-dishes-mobile">
+                <% i.each do |dish|  %>
+                <p><%= dish.name %></p>
                 <% end %>
               </div>
             </div>
