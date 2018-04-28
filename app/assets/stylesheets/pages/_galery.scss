@@ -185,6 +185,25 @@ padding-left: 0 !important;
     body{
     font-size: 10px;
   }
+  .container{
+    top:30vh;
+   padding-left: 10%;
+   padding-right: 10%;
+  }
+  .row{
+    margin-left:0;
+  }
+  .card {
+  height: 20vh;}
+.mySlides {
+  height: 50vh !important;
+}
+#myModal.modal{
+  display: none;
+  flex-direction:column;
+}
+
+
 }
 
 @media (min-width: 601px) and (max-width: 768px) {

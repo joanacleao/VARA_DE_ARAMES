@@ -92,11 +92,11 @@
       font-size: 10px;
     }
     .contact-container{
-      top: 30vh;
+      top: 35vh;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-            height: 70vh;
+            height: 65vh;
           .contact-form{
       width: 100%;
       margin-top: 0%;
@@ -104,6 +104,7 @@
       h1{
           margin-right: 15vw;
       margin-left:15vw;
+      margin-bottom:0;
       padding: 0;
       width: 70vw;
       align-text:left;
