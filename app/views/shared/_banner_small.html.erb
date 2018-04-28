@@ -14,6 +14,11 @@
             <li><%= link_to menu.name, menu_path(menu.id) %></li>
             <% end %>
                 </ul>
+                <ul class="dropdown-menu-mobile">
+            <% @menus.each do |menu| %>
+            <li><%= link_to menu.name, menu_path(menu.id) %></li>
+            <% end %>
+                </ul>
         </div>
           <%= link_to "VA à descoberta", dishes_index_path %>
       </div>
