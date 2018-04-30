@@ -201,6 +201,7 @@ padding-left: 0 !important;
 #myModal.modal{
   display: none;
   flex-direction:column;
+  z-index:2000;
 }
 
 
