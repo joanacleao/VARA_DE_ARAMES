@@ -152,6 +152,7 @@
 
 
 
+
   @media (max-width: 600px) {
     body{
       font-size: 10px;
@@ -212,4 +213,7 @@
       font-size:1.2em;
 
     }}
+     .dropdown-submenu>a{
+    cursor: default;
+  }
   }

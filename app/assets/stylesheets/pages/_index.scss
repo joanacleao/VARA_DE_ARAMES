@@ -199,7 +199,7 @@ align-items: center;
     }
   .index-content{
     top:35vh;
-        height: 50vh;
+        height: 65vh;
 
   }
   #myModal2.modal{
@@ -251,6 +251,19 @@ align-items: center;
     .index-menu-dishes-mobile{
     overflow-y: auto;
     width: 50vw;
+    }
+  }
+  .index-contact-us{
+    bottom: 3vh;
+    right:auto;
+    top:auto;
+    height:auto;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    z-index: 2000;
+    a{
+      font-size: 1.2em;
     }
   }
 }
