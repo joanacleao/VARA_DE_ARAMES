@@ -198,9 +198,12 @@ input[type="checkbox"]:checked:after {
     body{
       font-size: 10px;
     }
+    .new-view .menu-small-right{
+      display:none;
+    }
     .form-container{
-      top: 35vh;
-      height: 65vh;
+      top: 30vh;
+      height: 70vh;
     }
     .box{
       height: 40vh;
