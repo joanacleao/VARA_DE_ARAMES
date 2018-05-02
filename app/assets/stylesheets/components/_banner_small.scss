@@ -1,14 +1,16 @@
 .banner-small{
+  width: 100%;
+    display: flex;
+    justify-content: flex-end;
   background-color:white;
-  width: auto;
   opacity: 0%;
   position: fixed;
   right:2%;
   top:0%;
-  z-index:1500;
+  z-index:100;
   img{
     display:inline-block;
-    height: 19vh ;
+    height: 20vh ;
     margin: 0 auto;
   }
 }
@@ -21,10 +23,10 @@
   padding: 0 2%;
   border-bottom:1px solid #DEDCDC;
   position: fixed;
-  top:25vh;
-  z-index: 1001;
+  top:15vh;
+  z-index: 150;
   letter-spacing: 0.1em;
-  background-color:white;
+  // background-color:white;
   a{
    color: black;
    font-size: 1.2em;
@@ -47,7 +49,7 @@
   align-items: center;
   width: 50%;
   align-items: flex-end;
-  background-color:white;
+  // background-color:white;
   a{
     padding: 0 5%;
     font-weight: 300;
@@ -60,7 +62,7 @@
   align-items: center;
   width: auto;
   flex-direction: column;
-  height: 98vh;
+  height: 83vh;
   a {
     // padding: 0 1%;
     font-size: 0.8em;
@@ -162,16 +164,16 @@
       width: 100%;
       right: 0%;
       text-align: center;
-
+      justify-content: center;
       img{
         height: 20vh !important;
         margin: 5% auto;
       }
     }
     .menu-small {
-      top:25vh;
+      top:22vh;
       border-bottom:none;
-      background-color: transparent;
+      background-color: white;
       a{
         font-size: 1em;
       }
@@ -183,7 +185,7 @@
           font-size: 1.2em;
     }
     .menu-small-right{
-    height: 75vh;
+    height: 78vh;
     font-size: 1.2em;
       a {
         line-height: 220%;

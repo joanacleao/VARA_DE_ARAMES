@@ -1,5 +1,7 @@
 .banner{
-  width: auto;
+  width: 100%;
+    display: flex;
+    justify-content: flex-end;
   opacity: 0%;
   position: absolute;
   right:2%;
@@ -157,6 +159,7 @@ li a:active{
       width: 100%;
       right: 0%;
       text-align: center;
+      justify-content: center;
       img{
         height: 25vh !important;
         margin: 5% auto;
