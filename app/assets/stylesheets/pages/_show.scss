@@ -94,7 +94,11 @@ $easing: ease-in-out;
   body{
     font-size: 10px;
   }
-
+  .show-view{
+    .menu-small-right{
+      display:none;
+    }
+  }
   .menu-photo {
     display:none;
   }

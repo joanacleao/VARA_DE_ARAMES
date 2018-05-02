@@ -201,6 +201,11 @@ align-items: center;
     body{
     font-size: 10px;
     }
+    .index-view{
+      .menu-small-right{
+        display:none;
+      }
+    }
   .index-content{
     top:35vh;
         height: 65vh;
