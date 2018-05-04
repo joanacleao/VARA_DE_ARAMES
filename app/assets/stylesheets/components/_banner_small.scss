@@ -32,7 +32,6 @@
    text-decoration: none;
    letter-spacing: 0.1em;
         padding: 0 3%;
-
  }
 
  a:active, a:focus {
@@ -80,15 +79,12 @@
 .dropdown {
   position: relative;
   display: inline-block;
-    // padding: 0 4%;
-    //     line-height: 0.8em;
     a{
       font-variant: all-petite-caps;
     }
     .dropdown-toggle{
       padding: 0;
     }
-    // padding: 0 5%;
   }
 
   .dropdown-content {
