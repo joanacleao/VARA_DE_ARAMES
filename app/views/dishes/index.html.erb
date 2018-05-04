@@ -27,6 +27,20 @@
                 <% end %>
                 <% end %>
               </div>
+
+              <div class="index-menu-dishes-mobile-land">
+                <% @dishes_all.first[0..8].each do |dish|  %>
+                <p><%= dish.name %></p>
+                <% end %>
+              </div>
+              <div class="index-menu-dishes-mobile-land">
+                <% unless @dishes_all.first[9..-1] == nil %>
+                <% @dishes_all.first[9..-1].each do |dish|  %>
+                <p><%= dish.name %></p>
+                <% end %>
+                <% end %>
+              </div>
+
               <div class="index-menu-dishes-mobile">
                 <% @dishes_all.first.each do |dish|  %>
                 <p><%= dish.name %></p>
@@ -58,6 +72,18 @@
               <div class="index-menu-dishes">
                 <% unless i[11..-1] == nil %>
                 <% i[11..-1].each do |dish|  %>
+                <p><%= dish.name %></p>
+                <% end %>
+                <% end %>
+              </div>
+               <div class="index-menu-dishes-mobile-land">
+                <% i[0..8].each do |dish|  %>
+                <p><%= dish.name %></p>
+                <% end %>
+              </div>
+              <div class="index-menu-dishes-mobile-land">
+                <% unless i[9..-1] == nil %>
+                <% i[9..-1].each do |dish|  %>
                 <p><%= dish.name %></p>
                 <% end %>
                 <% end %>

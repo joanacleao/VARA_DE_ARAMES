@@ -1,3 +1,6 @@
+   .new-view .menu-small-right{
+      display:none;
+    }
 .form-error{
   color: red;
 }
@@ -193,11 +196,23 @@ input[type="checkbox"]:checked:after {
   overflow-y: scroll;
     // height: 80vh;
   }
-
-  @media (max-width: 600px) {
+  @media (max-width: 600px) and (orientation:portrait) {
     body{
-      font-size: 10px;
+    font-size: 10px;
     }
+    }
+@media (min-width: 601px) and (max-width: 768px) and (orientation:portrait){
+ body{
+    font-size: 14px;
+  }
+}
+  @media (min-width: 769px) and (max-width: 1024px) and (orientation:portrait){
+      body{
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 600px) and (orientation:portrait){
     .new-view .menu-small-right{
       display:none;
     }
@@ -287,10 +302,13 @@ input[type="checkbox"]:checked:after {
 }
   }
 
- @media (min-width: 601px) and (max-width: 768px) {
-    body{
-    font-size: 18px;
-  }
+ @media (min-width: 601px) and (max-width: 1024px) and (orientation:portrait) {
+  .new-view .menu-small-right{
+      display:none;
+    }
+    .form-container{
+      top: 30vh;
+    }
   .form-container{
       background-color: #e8e1e1;
   }

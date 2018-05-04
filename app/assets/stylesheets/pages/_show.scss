@@ -73,10 +73,10 @@ $easing: ease-in-out;
 
 [data-wipe] {
   display: inline-block;
-  padding: 12px 18px;
+  padding: 0.82em 1.2em;
   text-decoration: none;
   position: relative;
-  border: 2px solid #000000;
+  border: 0.15em solid #000000;
   border-radius: 3px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -89,11 +89,14 @@ $easing: ease-in-out;
     background: #000000;
   }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 600px) and (orientation:portrait){
   body{
     font-size: 10px;
   }
+}
+
+@media (max-width: 1024px) and (orientation:portrait){
+
   .show-view{
     .menu-small-right{
       display:none;
@@ -142,7 +145,7 @@ $easing: ease-in-out;
 .contact-us .btn {
     font-size: 1.2em;
     background-color: #FDFFFF;
-    font-weight: bold;
+    // font-weight: bold;
 
 }
 .menu-content {
@@ -152,13 +155,57 @@ $easing: ease-in-out;
   margin:5%;
   // color: white; - para *
 }
+[data-wipe] {
+  // padding: 6px 9px;
 }
-@media (min-width: 601px) and (max-width: 768px) {
+}
+
+@media (min-width: 601px) and (max-width: 768px) and (orientation:portrait){
  body{
     font-size: 14px;
   }
-  .menu-content{
-    margin: 10%;
+}
+  @media (min-width: 769px) and (max-width: 1024px) and (orientation:portrait){
+      body{
+      font-size: 22px;
+    }
+  }
+
+@media (max-width: 600px) and (orientation:landscape){
+body{
+    font-size:10px;
+  }
+  p {margin: 0 0 5px;}
+}
+
+@media (min-width: 601px) and (max-width: 812px) and (orientation:landscape){
+body{
+    font-size:10px;
+  }
+    // p {margin: 0 0 5px;}
+}
+// @media (min-width: 813px) and (max-width: 1366px) and (orientation:landscape){
+// body{
+//     font-size:22px;
+//   }
+// }
+
+// @media (min-width: 1367px) and (orientation:landscape){
+// body{
+//     font-size:26px;
+//   }
+// }
+
+
+@media (orientation:landscape){
+
+
+  .menu-content {
+    width: 50%;
+     p {
+
+    font-weight:bold
+}
   }
 }
 
