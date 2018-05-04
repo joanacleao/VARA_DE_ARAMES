@@ -120,7 +120,7 @@
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 8%;
     display: block;
     // font-size: 0.8em;
@@ -220,11 +220,11 @@
       justify-content: center;
       display:block;
       a{
-        font-size: 1em;
+        // font-size: 1em;
       }
     }
     .dropdown-content a{
-      font-size:1em;
+      font-size:1.2em;
     }
     .menu-small-left{
       justify-content: space-evenly;
@@ -289,6 +289,7 @@
           min-width: 150px;
     a{
       padding: 4%;
+      font-size:1.2em;
     }
   }
     .dropdown-menu-mobile{

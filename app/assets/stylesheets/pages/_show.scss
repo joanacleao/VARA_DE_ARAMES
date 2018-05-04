@@ -209,3 +209,13 @@ body{
   }
 }
 
+@media only screen
+    and (device-width : 320px)
+    and (device-height : 480px){
+  .menu-content p {
+    margin: 0 0 5px;
+  }
+}
+
+
+
