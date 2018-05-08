@@ -52,7 +52,6 @@
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
   .background-image{
-/*  background-image: image-url('Desktop.png');*/
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -61,14 +60,18 @@
   height: 100vh;
   overflow: hidden;
 }
+.background-image p h1 {
+  font-family: "Roboto", "PT Sans", "sans-serif";
+  font-variant: all-petite-caps;
+}
 </style>
 </head>
 
 <body>
   <!-- This file lives in public/500.html -->
-  <div class="background-image" style="background-image: url(Desktop.png)">
+  <div class="background-image" style="background-image: url(/Desktop.png)">
       <h1>Lamentamos mas ocorreu um problema!</h1>
-      <p>Por favor volte à página inicial clicando aqui</p>
+      <p>Por favor volte à página inicial clicando <a href="http://varadearames.herokuapp.com/">aqui</a></p>
       <p>ou entre em contacto connosco: varadearames@gmail.com</p>
       <p>Obrigada!</p>
     </div>
