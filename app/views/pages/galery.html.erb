@@ -2,10 +2,10 @@
 <%= render 'shared/banner_small' %>
 <div class="container">
   <div class="row">
-<% (1..16).each do |i| %>
+<% (1..23).each do |i| %>
     <div class="col-xs-6 col-sm-4">
       <!-- insert <div class="card"> -->
-        <div class="card card<%= i%> hover-shadow cursor" onclick="openModal();currentSlide(<%= i%>)"></div>
+        <div class="card hover-shadow cursor" style="background-image: url(../assets/<%= i%>.jpg)" onclick="openModal();currentSlide(<%= i%>)"></div>
     </div>
     <% end %>
   </div>
@@ -14,7 +14,7 @@
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
-    <% (1..16).each do |i| %>
+    <% (1..23).each do |i| %>
       <img src="assets/<%= i%>.jpg"  class="mySlides">
    <% end %>
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
