@@ -55,13 +55,16 @@
 </head>
 
 <body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+  <!-- This file lives in public/500.html -->
+  <%= render 'shared/banner' %>
+  <div class="background-image">
+    <div class="dialog">
+      <h1>Lamentamos mas a página que procura não existe!</h1>
+      <p>Por favor vá para a página inicial clicando aqui</p>
+      <p>ou entre em contacto connosco através do e-mail varadearames@gmail.com</p>
+      <p>Obrigada!</p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
   </div>
+</div>
 </body>
 </html>
