@@ -196,6 +196,31 @@ input[type="checkbox"]:checked:after {
   overflow-y: scroll;
     // height: 80vh;
   }
+
+.intro{
+      margin-bottom: 0;
+    height: 5vh;
+}
+
+#contact_employee{
+  margin: 8px 0 0;
+}
+
+#contact_furniture{
+    margin: 8px 0 0;
+}
+
+.form-att{
+  display: flex;
+    width: 50%;
+}
+
+.attributes label{
+  margin-left: 3%;
+  justify-content: center !important;
+}
+
+
   @media (max-width: 600px) and (orientation:portrait) {
     body{
     font-size: 10px;
