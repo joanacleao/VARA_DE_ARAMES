@@ -16,6 +16,8 @@ class ContactsController < ApplicationController
   @date = contact_params[:date]
   @location = contact_params[:localization]
   @menu_id = contact_params[:menu_id]
+  @employee = contact_params[:employee]
+  @furniture = contact_params[:furniture]
   if contact_params[:menu_id] != ""
   @menu_dishes = Menu.find(contact_params[:menu_id]).menu_dishes
   end
@@ -71,11 +73,11 @@ end
 private
 
 def contact_params
-  params.require(:contact).permit(:name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu_id, :comment)
+  params.require(:contact).permit(:name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu_id, :comment, :employee, :furniture)
 end
 
 def contact_dish_params
-  params.require(:contact_dish).permit(:contact_dishes, :name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu_id, :comment)
+  params.require(:contact_dish).permit(:contact_dishes, :name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu_id, :comment, :employee, :furniture)
 end
 
 end

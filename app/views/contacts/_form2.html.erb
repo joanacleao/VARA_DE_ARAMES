@@ -1,8 +1,5 @@
 <%= form_for @contact_dish , url: { action: "create" } do |c| %>
 <div class="form-horizontal field" id="details">
-
-
-
            <div class="subtitle"><p> verifique os pratos seleccionados e adicione / altere o que desejar:</p></div>
              <div class="box">
     <div class="check-groups">
@@ -108,6 +105,8 @@
   <%= c.hidden_field :date, :value => @date %>
   <%= c.hidden_field :localization, :value => @location %>
   <%= c.hidden_field :menu_id, :value => @menu_id %>
+    <%= c.hidden_field :employee, :value => @employee %>
+      <%= c.hidden_field :furniture, :value => @furniture %>
   <% end %>
 
 

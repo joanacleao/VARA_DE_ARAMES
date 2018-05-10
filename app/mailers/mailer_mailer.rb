@@ -8,6 +8,6 @@ class MailerMailer < ApplicationMailer
   def send_email(contact)
     @contact = contact
 
-    mail(to: "varadearames@gmail.com", subject: "New Form from #{contact.name}")
+    mail(to: "joanacastroleao@gmail.com", subject: "New Form from #{contact.name}")
   end
 end

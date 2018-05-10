@@ -199,7 +199,9 @@ input[type="checkbox"]:checked:after {
 
 .intro{
       margin-bottom: 0;
-    height: 5vh;
+p {
+  margin-bottom:0;
+}
 }
 
 #contact_employee{
@@ -212,12 +214,11 @@ input[type="checkbox"]:checked:after {
 
 .form-att{
   display: flex;
-    width: 50%;
-}
-
-.attributes label{
-  margin-left: 3%;
-  justify-content: center !important;
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+  width: auto;
+  font-size: 0.9em;
+  font-variant: all-petite-caps;
 }
 
 
