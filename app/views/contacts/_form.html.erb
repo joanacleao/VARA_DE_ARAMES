@@ -53,6 +53,15 @@
       <% end %>
       <% end %>
    </div>
+     <div class="form">
+      <%= c.text_field :menu_id, placeholder:"Tipo evento (Ex. Cocktail, Coffee Break, After Work ...)"%>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:menu_id].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:menu_id].first %></span>
+      <% end %>
+      <% end %>
+   </div>
+
    <div class="form intro">
      <p>Assinale caso necessite:</p>
    </div>
@@ -70,7 +79,7 @@
         <%= c.label :palament, "Palamenta" %>
       </div>
    </div>
-   <div class="form">
+   <div class="form-end">
    <!--  <select required="require" name="contact[menu_id]" id="contact_menu_id">
       <option disabled selected value="" >Tipo de Evento</option>
       <option value="27">Cocktail</option>
@@ -78,13 +87,6 @@
       <option value="29">Coffee Break</option>
       <option value="30">After Work</option>
     </select> -->
-  <%= c.text_field :menu_id, placeholder:"Tipo evento (Ex. Cocktail, Coffee Break, After Work ...)"%>
-      <% unless @contact.errors.first.nil? %>
-      <% if @contact.errors.messages[:menu_id].present? %>
-      <span class="form-error"><%= @contact.errors.messages[:menu_id].first %></span>
-      <% end %>
-      <% end %>
-
     <%= c.submit value="Continuar", :class => "continuar" %>
   </div >
 </div>

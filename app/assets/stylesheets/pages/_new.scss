@@ -61,7 +61,6 @@ select:focus {
     color: #F1F1F2;
     background: #000000;
   }
-
     }
 
   #contact_name{
@@ -87,8 +86,31 @@ select:focus {
     width: 10vw;
   }
   #contact_menu_id{
-    width: 30vw;
+    width: 40vw;
   }
+}
+.form-end{
+  display: flex;
+    justify-content: flex-end !important;
+    .continuar{
+  display: inline-block;
+  padding: 4px 6px;
+  text-decoration: none;
+  position: relative;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #000000;
+  overflow: hidden;
+  background-color:white;
+  font-size: 0.8em;
+  &:hover {
+    color: #F1F1F2;
+    background: #000000;
+  }
+    }
 }
 .form-all{
   width: 100vw;

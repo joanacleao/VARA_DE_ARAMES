@@ -19,9 +19,10 @@ class ContactsController < ApplicationController
   @employee = contact_params[:employee]
   @furniture = contact_params[:furniture]
   @palament = contact_params[:palament]
-  if contact_params[:menu_id] != ""
-  @menu_dishes = Menu.find(contact_params[:menu_id]).menu_dishes
-  end
+
+  # if contact_params[:menu_id] != ""
+  # @menu_dishes = Menu.find(contact_params[:menu_id]).menu_dishes
+  # end
   @menus = Menu.all
   @contact = Contact.new(contact_params)
   unless @contact.valid?
