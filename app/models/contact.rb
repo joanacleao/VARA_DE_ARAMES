@@ -9,7 +9,7 @@ class Contact < ApplicationRecord
   validates :localization, presence: true
   validates :n_pax, presence: true, numericality: { only_integer: true }, on: :create
   validates :n_ch, presence: true, numericality: { only_integer: true }, on: :create
-  validates :menu_id, presence: true
+  validates :menu, presence: true
 
   # validates :menu_id, inclusion: { in: (eval (Menu.all.map(&:id).join ',').split(",").to_s.gsub('"', '')) }
    validates :date, presence: true

@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
   @n_ch = contact_params[:n_ch]
   @date = contact_params[:date]
   @location = contact_params[:localization]
-  @menu_id = contact_params[:menu_id]
+  @menu_id = contact_params[:menu]
   @employee = contact_params[:employee]
   @furniture = contact_params[:furniture]
   @palament = contact_params[:palament]
@@ -30,7 +30,7 @@ class ContactsController < ApplicationController
   end
 
   @contact_dish = ContactDish.new
-  render :new, menu_id: @menu_id
+  render :new
 end
 
 
@@ -74,11 +74,11 @@ end
 private
 
 def contact_params
-  params.require(:contact).permit(:name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu_id, :comment, :employee, :furniture, :palament)
+  params.require(:contact).permit(:name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu, :comment, :employee, :furniture, :palament)
 end
 
 def contact_dish_params
-  params.require(:contact_dish).permit(:contact_dishes, :name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu_id, :comment, :employee, :furniture, :palament)
+  params.require(:contact_dish).permit(:contact_dishes, :name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu, :comment, :employee, :furniture, :palament)
 end
 
 end

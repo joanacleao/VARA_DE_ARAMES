@@ -10,7 +10,7 @@
 <p>Pessoal p/ Servir: <%= @contact.employee %></p>
 <p>Mobiliário: <%= @contact.furniture %> </p>
 <p>Palamenta: <%= @contact.palament %> </p>
-<p>Tipo de Evento: <%= Menu.find(@contact.menu_id).name %> </p>
+<p>Tipo de Evento: <%= @contact.menu %> </p>
 <p>Pratos Seleccionados:</p>
 <% @contact.contact_dishes.each do |dish| %>
 <div>
