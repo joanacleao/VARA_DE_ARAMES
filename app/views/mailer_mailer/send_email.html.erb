@@ -7,14 +7,16 @@
 <p>Local: <%= @contact.localization %></p>
 <p>Nº Adultos: <%= @contact.n_pax %></p>
 <p>Nº Crianças: <%= @contact.n_ch %></p>
-<p>Agentes de Serviço: <%= @contact.employee %></p>
-<p>Mobilia: <%= @contact.furniture %> </p>
-<p>Menu: <%= Menu.find(@contact.menu_id).name %> </p>
-<p>Pratos seleccionados:</p>
+<p>Pessoal p/ Servir: <%= @contact.employee %></p>
+<p>Mobiliário: <%= @contact.furniture %> </p>
+<p>Palamenta: <%= @contact.palament %> </p>
+<p>Tipo de Evento: <%= Menu.find(@contact.menu_id).name %> </p>
+<p>Pratos Seleccionados:</p>
 <% @contact.contact_dishes.each do |dish| %>
 <div>
   <ul><%= dish.dish.name %></ul>
 <% end %>
 </div>
 
-<p>Dados adicionais: <%=@contact.comment %></p>
+<p>Dados Adicionais: <%=@contact.comment %></p>
+

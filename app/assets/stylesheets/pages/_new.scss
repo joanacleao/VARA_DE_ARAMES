@@ -87,7 +87,7 @@ select:focus {
     width: 10vw;
   }
   #contact_menu_id{
-    width: 15vw;
+    width: 30vw;
   }
 }
 .form-all{
@@ -201,6 +201,7 @@ input[type="checkbox"]:checked:after {
       margin-bottom: 0;
 p {
   margin-bottom:0;
+  font-weight: bold;
 }
 }
 
@@ -219,6 +220,9 @@ p {
   width: auto;
   font-size: 0.9em;
   font-variant: all-petite-caps;
+  label{
+    font-weight: normal;
+  }
 }
 
 

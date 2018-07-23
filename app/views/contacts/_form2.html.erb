@@ -1,6 +1,6 @@
 <%= form_for @contact_dish , url: { action: "create" } do |c| %>
 <div class="form-horizontal field" id="details">
-           <div class="subtitle"><p> verifique os pratos seleccionados e adicione / altere o que desejar:</p></div>
+           <div class="subtitle"><p> Percorra as listas e seleccione as opções que desejar:</p></div>
              <div class="box">
     <div class="check-groups">
 
@@ -8,16 +8,8 @@
         <p>Para Acordar:</p>
         <%= c.collection_check_boxes :contact_dishes, @dishes.where(meal_type:"Para Acordar"), :id, :name do |dish| %>
         <div class="collection-check-box">
-          <% if @menu_dishes.nil? %>
           <%= dish.check_box checked: false %>
           <%= dish.label %>
-          <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
-          <%= dish.check_box checked: true %>
-          <%= dish.label %>
-          <% else %>
-          <%= dish.check_box checked: false %>
-          <%= dish.label %>
-          <% end %>
         </div>
         <% end %>
       </div>
@@ -25,16 +17,8 @@
         <p>Para Petiscar:</p>
         <%= c.collection_check_boxes :contact_dishes, @dishes.where(meal_type:"Para Petiscar"), :id, :name do |dish| %>
         <div class="collection-check-box">
-          <% if @menu_dishes.nil? %>
           <%= dish.check_box checked: false %>
           <%= dish.label %>
-          <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
-          <%= dish.check_box checked: true %>
-          <%= dish.label %>
-          <% else %>
-          <%= dish.check_box checked: false %>
-          <%= dish.label %>
-          <% end %>
         </div>
         <% end %>
       </div>
@@ -42,16 +26,8 @@
         <p>Para Almoçar | Jantar:</p>
         <%= c.collection_check_boxes :contact_dishes, @dishes.where(meal_type:"Para Almoçar | Jantar"), :id, :name do |dish| %>
         <div class="collection-check-box">
-          <% if @menu_dishes.nil? %>
           <%= dish.check_box checked: false %>
           <%= dish.label %>
-          <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
-          <%= dish.check_box checked: true %>
-          <%= dish.label %>
-          <% else %>
-          <%= dish.check_box checked: false %>
-          <%= dish.label %>
-          <% end %>
         </div>
         <% end %>
       </div>
@@ -59,16 +35,8 @@
         <p>Para Acompanhar:</p>
         <%= c.collection_check_boxes :contact_dishes, @dishes.where(meal_type:"Para Acompanhar"), :id, :name do |dish| %>
         <div class="collection-check-box">
-          <% if @menu_dishes.nil? %>
           <%= dish.check_box checked: false %>
           <%= dish.label %>
-          <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
-          <%= dish.check_box checked: true %>
-          <%= dish.label %>
-          <% else %>
-          <%= dish.check_box checked: false %>
-          <%= dish.label %>
-          <% end %>
         </div>
         <% end %>
       </div>
@@ -76,16 +44,8 @@
         <p>Para Beber:</p>
         <%= c.collection_check_boxes :contact_dishes, @dishes.where(meal_type:"Para Beber"), :id, :name do |dish| %>
         <div class="collection-check-box">
-          <% if @menu_dishes.nil? %>
           <%= dish.check_box checked: false %>
           <%= dish.label %>
-          <% elsif @menu_dishes.map {|md| md.dish_id}.include?(dish.value)%>
-          <%= dish.check_box checked: true %>
-          <%= dish.label %>
-          <% else %>
-          <%= dish.check_box checked: false %>
-          <%= dish.label %>
-          <% end %>
         </div>
         <% end %>
       </div>
@@ -105,8 +65,10 @@
   <%= c.hidden_field :date, :value => @date %>
   <%= c.hidden_field :localization, :value => @location %>
   <%= c.hidden_field :menu_id, :value => @menu_id %>
-    <%= c.hidden_field :employee, :value => @employee %>
-      <%= c.hidden_field :furniture, :value => @furniture %>
+  <%= c.hidden_field :employee, :value => @employee %>
+  <%= c.hidden_field :furniture, :value => @furniture %>
+  <%= c.hidden_field :palament, :value => @palament %>
+
   <% end %>
 
 

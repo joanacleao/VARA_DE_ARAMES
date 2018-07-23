@@ -15,7 +15,7 @@
 }
 
 li a:active{
-          top:1px
+          top:1px;
         }
 
 .menu {
@@ -30,10 +30,13 @@ li a:active{
     z-index: 100;
     a{
       color: black;
-      font-size: 1.2em;
+      font-size: 1em;
       text-decoration: none;
+      font-variant: none;
       letter-spacing: 0.1em;
-
+    }
+    li a {
+      font-variant: none;
     }
   a:active, a:focus {
   outline: 0;
@@ -96,7 +99,7 @@ li a:active{
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
-    font-size: 1.2em;
+    font-size: 0.8em;
     padding: 8%;
     display: block;
   }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180509100337) do
+ActiveRecord::Schema.define(version: 20180718134330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20180509100337) do
     t.datetime "updated_at", null: false
     t.boolean "employee", default: false
     t.boolean "furniture", default: false
+    t.boolean "palament"
     t.index ["menu_id"], name: "index_contacts_on_menu_id"
   end
 

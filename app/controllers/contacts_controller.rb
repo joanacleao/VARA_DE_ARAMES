@@ -18,6 +18,7 @@ class ContactsController < ApplicationController
   @menu_id = contact_params[:menu_id]
   @employee = contact_params[:employee]
   @furniture = contact_params[:furniture]
+  @palament = contact_params[:palament]
   if contact_params[:menu_id] != ""
   @menu_dishes = Menu.find(contact_params[:menu_id]).menu_dishes
   end
@@ -29,7 +30,6 @@ class ContactsController < ApplicationController
 
   @contact_dish = ContactDish.new
   render :new, menu_id: @menu_id
-
 end
 
 
@@ -73,11 +73,11 @@ end
 private
 
 def contact_params
-  params.require(:contact).permit(:name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu_id, :comment, :employee, :furniture)
+  params.require(:contact).permit(:name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu_id, :comment, :employee, :furniture, :palament)
 end
 
 def contact_dish_params
-  params.require(:contact_dish).permit(:contact_dishes, :name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu_id, :comment, :employee, :furniture)
+  params.require(:contact_dish).permit(:contact_dishes, :name, :email, :phone, :n_pax, :n_ch, :date, :localization, :menu_id, :comment, :employee, :furniture, :palament)
 end
 
 end

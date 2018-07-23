@@ -1,8 +1,8 @@
 
 <div class="form-all">
   <%= form_for @contact, html: { class: "form-horizontal center" }, url: { action: "precreate" } do |c| %>
-  <!--   <div class="title"><p>Preencha por favor os seguintes dados:</p></div> -->
   <div class="col-xs-12">
+      <div class="title"><p>Preencha por favor os seguintes dados:</p></div>
     <div class="form">
       <%= c.text_field :name, placeholder:"Nome/Empresa" %>
       <% unless @contact.errors.first.nil? %>
@@ -57,14 +57,18 @@
      <p>Assinale caso necessite:</p>
    </div>
     <div class="form-att">
-    <div class="attribute">
-          <%= c.check_box :employee %>
-    <%= c.label :employee, "Agentes de Serviço" %>
-    </div>
-        <div class="attribute">
-              <%= c.check_box :furniture %>
-    <%= c.label :furniture, "Mobília" %>
-   </div>
+      <div class="attribute">
+        <%= c.check_box :employee %>
+        <%= c.label :employee, "Pessoal p/ servir" %>
+      </div>
+      <div class="attribute">
+        <%= c.check_box :furniture %>
+        <%= c.label :furniture, "Mobiliário" %>
+      </div>
+      <div class="attribute">
+        <%= c.check_box :palament %>
+        <%= c.label :palament, "Palamenta" %>
+      </div>
    </div>
    <div class="form">
    <!--  <select required="require" name="contact[menu_id]" id="contact_menu_id">
@@ -74,11 +78,15 @@
       <option value="29">Coffee Break</option>
       <option value="30">After Work</option>
     </select> -->
-    <%= c.select :menu_id, options_from_collection_for_select(@menus, 'id', 'name' , :selected => c.object.menu_id, :class =>"form-list") , include_blank: "Tipo evento"%>
+  <%= c.text_field :menu_id, placeholder:"Tipo evento (Ex. Cocktail, Coffee Break, After Work ...)"%>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:menu_id].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:menu_id].first %></span>
+      <% end %>
+      <% end %>
+
     <%= c.submit value="Continuar", :class => "continuar" %>
   </div >
-
-
 </div>
 <% end %>
 </div>
