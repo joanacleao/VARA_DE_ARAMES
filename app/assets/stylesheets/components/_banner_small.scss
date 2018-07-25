@@ -21,14 +21,14 @@
   height:5vh;
   width:100%;
   padding: 0 2%;
-  border-bottom:1px solid #DEDCDC;
+  // border-bottom:1px solid #DEDCDC;
   position: fixed;
   top:15vh;
   z-index: 150;
   letter-spacing: 0.1em;
   a{
    color: black;
-   font-size: 1em;
+   font-size: 0.9em;
    text-decoration: none;
    font-variant: none;
    letter-spacing: 0.1em;
@@ -46,6 +46,7 @@
 }
 
 .menu-small-left{
+  border-bottom: 1px solid #DEDCDC;
   display: flex;
   justify-content: flex-start;
   align-items: center;

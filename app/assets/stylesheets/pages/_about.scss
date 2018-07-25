@@ -1,0 +1,38 @@
+.about-container{
+  background-image: image-url('/assets/Desktop.png');
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index:0;
+  background-size: cover;
+
+  display: flex;
+  justify-content: space-around;
+  font-variant: all-petite-caps;
+  position: relative;
+    top: 20vh;
+    height: 80vh;
+    width: 100%;
+    /* width: 90%; */
+    background-color: #E8E1E1;
+    /* margin: 2%; */
+}
+.about-title{
+    text-align: right;
+    position: absolute;
+    right: 0vw;
+    margin-right: 4%;
+    top: 5vh;
+}
+
+.about-body{
+  text-align: justify;
+    position: absolute;
+    left: 0;
+    margin-left: 4%;
+    top: 10vh;
+    font-variant: none;
+    font-weight: 300;
+    width: 50%;
+
+}

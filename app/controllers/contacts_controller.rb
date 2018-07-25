@@ -68,6 +68,7 @@ def create_small
   else
     render :contact
   end
+
 end
 
 

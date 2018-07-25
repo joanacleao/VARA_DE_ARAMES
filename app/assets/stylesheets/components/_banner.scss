@@ -30,7 +30,7 @@ li a:active{
     z-index: 100;
     a{
       color: black;
-      font-size: 1em;
+      font-size: 0.9em;
       text-decoration: none;
       font-variant: none;
       letter-spacing: 0.1em;
@@ -54,9 +54,9 @@ li a:active{
       padding: 0 5%;
       font-weight: 300;
     }
-    >a:focus {
-  font-size: 1.4em;
-}
+//     >a:focus {
+//   font-size: 1.4em;
+// }
   }
 
   .menu-right{
