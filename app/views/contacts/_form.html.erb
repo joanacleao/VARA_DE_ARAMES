@@ -87,7 +87,9 @@
       <option value="29">Coffee Break</option>
       <option value="30">After Work</option>
     </select> -->
+    <% if current_page?(controller: 'contacts', action: 'new') %>
     <%= c.submit value="Continuar", :class => "continuar" %>
+    <% end %>
   </div >
 </div>
 <% end %>
