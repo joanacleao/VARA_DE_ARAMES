@@ -4,7 +4,11 @@
   <div class="col-xs-12">
       <div class="title"><p>Preencha por favor os seguintes dados:</p></div>
     <div class="form">
+      <% if params[:action] == "precreate" && @error_message.nil?%>
+      <%= c.text_field :name, placeholder:"Nome/Empresa", readonly:"readonly" %>
+      <% else %>
       <%= c.text_field :name, placeholder:"Nome/Empresa" %>
+      <% end %>
       <% unless @contact.errors.first.nil? %>
       <% if @contact.errors.messages[:name].present? %>
       <span class="form-error"><%= @contact.errors.messages[:name].first %></span>
@@ -12,7 +16,11 @@
       <% end %>
     </div >
     <div class="form">
+      <% if params[:action] == "precreate"&& @error_message.nil? %>
+      <%= c.text_field :email, placeholder:"Email", readonly:"readonly" %>
+      <% else %>
       <%= c.text_field :email, placeholder:"Email"%>
+      <% end %>
       <% unless @contact.errors.first.nil? %>
       <% if @contact.errors.messages[:email].present? %>
       <span class="form-error"><%= @contact.errors.messages[:email].first %></span>
@@ -20,13 +28,21 @@
       <% end %>
     </div >
     <div class="form">
-      <%= c.text_field :phone , placeholder:"Telefone"%>
+      <% if params[:action] == "precreate" && @error_message.nil?%>
+      <%= c.text_field :phone , placeholder:"Telefone", readonly:"readonly" %>
+      <% else %>
+      <%= c.text_field :phone , placeholder:"Telefone" %>
+      <% end %>
       <% unless @contact.errors.first.nil? %>
       <% if @contact.errors.messages[:phone].present? %>
       <span class="form-error"><%= @contact.errors.messages[:phone].first %></span>
       <% end %>
       <% end %>
+      <% if params[:action] == "precreate"&& @error_message.nil? %>
+      <%= c.text_field :localization, placeholder:"Local", readonly:"readonly"%>
+      <% else %>
       <%= c.text_field :localization, placeholder:"Local"%>
+      <% end %>
       <% unless @contact.errors.first.nil? %>
       <% if @contact.errors.messages[:localization].present? %>
       <span class="form-error"><%= @contact.errors.messages[:localization].first %></span>
@@ -34,19 +50,31 @@
       <% end %>
     </div>
     <div class="form">
-     <%= c.date_field :date, as: :date%>
+      <% if params[:action] == "precreate"&& @error_message.nil? %>
+     <%= c.date_field :date, as: :date, readonly:"readonly"%>
+    <% else %>
+    <%= c.date_field :date, as: :date%>
+    <% end %>
       <% unless @contact.errors.first.nil? %>
       <% if @contact.errors.messages[:date].present? %>
       <span class="form-error"><%= @contact.errors.messages[:date].first %></span>
       <% end %>
       <% end %>
+      <% if params[:action] == "precreate" && @error_message.nil?%>
+     <%= c.text_field :n_pax, placeholder:"Adultos", readonly:"readonly"%>
+    <% else %>
      <%= c.text_field :n_pax, placeholder:"Adultos"%>
+     <% end %>
       <% unless @contact.errors.first.nil? %>
       <% if @contact.errors.messages[:n_pax].present? %>
       <span class="form-error"><%= @contact.errors.messages[:n_pax].first %></span>
       <% end %>
       <% end %>
-     <%= c.text_field :n_ch, placeholder:"Crianças" %>
+      <% if params[:action] == "precreate" && @error_message.nil? %>
+     <%= c.text_field :n_ch, placeholder:"Crianças", readonly:"readonly" %>
+     <% else %>
+      <%= c.text_field :n_ch, placeholder:"Crianças" %>
+      <% end %>
       <% unless @contact.errors.first.nil? %>
       <% if @contact.errors.messages[:n_ch].present? %>
       <span class="form-error"><%= @contact.errors.messages[:n_ch].first %></span>
@@ -54,7 +82,11 @@
       <% end %>
    </div>
      <div class="form">
+      <% if params[:action] == "precreate" && @error_message.nil? %>
+      <%= c.text_field :menu, placeholder:"Tipo evento (Ex. Cocktail, Coffee Break, After Work ...)", readonly:"readonly"%>
+      <% else %>
       <%= c.text_field :menu, placeholder:"Tipo evento (Ex. Cocktail, Coffee Break, After Work ...)"%>
+      <% end %>
       <% unless @contact.errors.first.nil? %>
       <% if @contact.errors.messages[:menu].present? %>
       <span class="form-error"><%= @contact.errors.messages[:menu].first %></span>
@@ -63,19 +95,31 @@
    </div>
 
    <div class="form intro">
-     <p>Assinale caso necessite:</p>
+     <p>Extras:</p>
    </div>
     <div class="form-att">
       <div class="attribute">
+        <% if params[:action] == "precreate" && @error_message.nil? %>
+        <%= c.check_box :employee, disabled:"true" %>
+        <% else %>
         <%= c.check_box :employee %>
+        <% end %>
         <%= c.label :employee, "Pessoal p/ servir" %>
       </div>
       <div class="attribute">
+        <% if params[:action] == "precreate" && @error_message.nil? %>
+        <%= c.check_box :furniture, disabled:"true"   %>
+        <% else %>
         <%= c.check_box :furniture %>
+        <% end %>
         <%= c.label :furniture, "Mobiliário" %>
       </div>
       <div class="attribute">
+        <% if params[:action] == "precreate" && @error_message.nil? %>
+        <%= c.check_box :palament, disabled:"true"%>
+        <% else %>
         <%= c.check_box :palament %>
+        <% end %>
         <%= c.label :palament, "Palamenta" %>
       </div>
    </div>
@@ -87,7 +131,7 @@
       <option value="29">Coffee Break</option>
       <option value="30">After Work</option>
     </select> -->
-    <% if current_page?(controller: 'contacts', action: 'new') %>
+    <% if params[:action] == "new" || params[:action] == "precreate" && !@error_message.nil? %>
     <%= c.submit value="Continuar", :class => "continuar" %>
     <% end %>
   </div >
