@@ -19,7 +19,6 @@
   top: 20vh;
   height: 80vh;
   width: 100%;
-  // background-color: #E8E1E1;
   h1{
     margin-top: 0;
     font-size: 1.2em;
@@ -124,22 +123,34 @@
     }
     .contact-view{
       .menu-small-right{
-        display: flex;
+        display: none;
       }
     }
     .contact-container{
       top: 30vh;
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: space-evenly;
       align-items: center;
-      height: 70vh;
+      height:auto;
+
+      .contact-photo{
+        width: 70%;
+        height: 20vh;
+              }
       .contact-form{
-        width: 100%;
+        height: auto;
+        // width: 90%;
         margin-top: 0%;
         margin-left: 0%;
+      .contact-data .contact-email {
+        width: 40vw;
+      }
+      .contact-data .contact-web {
+        width: 20vw;
+        display:flex;
+        justify-content: space-around;
+      }
         h1{
-          margin-right: 15vw;
-          margin-left:15vw;
           margin-bottom:0;
           padding: 0;
           width: 70vw;
@@ -149,7 +160,7 @@
       }
       .form-all{
         justify-content: center;
-        width: 100%;
+        // width: 100%;
       }
       .contact-data{
         margin-right: 0%;
@@ -157,6 +168,8 @@
         width: 50vw;
         display: flex;
         flex-direction: column;
+        padding-bottom: 5%;
+
         h1{
           margin:0;
           margin-bottom: 1%;
