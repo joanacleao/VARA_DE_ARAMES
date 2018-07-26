@@ -132,7 +132,7 @@
       <option value="30">After Work</option>
     </select> -->
     <% if params[:action] == "new" || params[:action] == "precreate" && !@error_message.nil? %>
-    <%= c.submit value="Continuar", :class => "continuar" %>
+    <%= c.submit value="Continuar", :class => "continuar", onclick:"ScrollDown(1)" %>
     <% end %>
   </div >
 </div>

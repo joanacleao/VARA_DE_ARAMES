@@ -36,3 +36,20 @@
     width: 50%;
 
 }
+
+@media (max-width: 1024px) and (orientation:portrait) {
+
+ .about-container{
+  background-image: image-url('/assets/back_mobile.png');
+  }
+  .about-title{
+    top: 12vh;
+    p{
+      margin-bottom: 5px;
+    }
+  }
+  .about-body{
+    width: 90%;
+    top: 25vh;
+  }
+}

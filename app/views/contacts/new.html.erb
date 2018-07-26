@@ -11,3 +11,26 @@
   </div>
 </div>
 
+<script>
+  function _(id) {
+  return document.getElementById(id);
+}
+//_("height").innerText = "Chiều dài của trang: " + Number (document.body.scrollHeight - window.innerHeight) + "px";
+
+function ScrollDown(to) {
+  var innerHeight = window.innerHeight;
+  var scrollStart = innerHeight * to - innerHeight;
+  var scrollEnd = innerHeight * to;
+  var timeScroll = 250;
+  var fps = 20;
+
+  var scrollInterval = setInterval(function() {
+    scrollStart += innerHeight / fps;
+    scrollTo(0, scrollStart);
+  }, timeScroll / fps);
+
+  setTimeout(function() {
+    clearInterval(scrollInterval);
+  }, timeScroll);
+}
+</script>
