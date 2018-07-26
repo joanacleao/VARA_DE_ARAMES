@@ -136,7 +136,7 @@
       .contact-photo{
         width: 70%;
         height: 20vh;
-              }
+      }
       .contact-form{
         height: auto;
         // width: 90%;
@@ -144,11 +144,15 @@
         margin-left: 0%;
       .contact-data .contact-email {
         width: 40vw;
+        p{
+          font-size: 0.9em;
+        }
       }
       .contact-data .contact-web {
         width: 20vw;
         display:flex;
         justify-content: space-around;
+
       }
         h1{
           margin-bottom:0;
@@ -161,6 +165,12 @@
       .form-all{
         justify-content: center;
         // width: 100%;
+        .form{
+          input{
+            font-size:0.9em;
+            border: 1px solid #DEDCDC !important;
+          }
+        }
       }
       .contact-data{
         margin-right: 0%;
