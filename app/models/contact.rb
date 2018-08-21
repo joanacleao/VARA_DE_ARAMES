@@ -12,6 +12,14 @@ class Contact < ApplicationRecord
   validates :menu, presence: true
 
   # validates :menu_id, inclusion: { in: (eval (Menu.all.map(&:id).join ',').split(",").to_s.gsub('"', '')) }
-   validates :date, presence: true
+  validates :date, presence: true
+   # validate :date_must_be_in_future
+
+  # def date_must_be_in_future
+  #   if date < Date.today
+  #     errors.add(:date, "Data incorrecta")
+  #   end
+  # end
+
 end
 

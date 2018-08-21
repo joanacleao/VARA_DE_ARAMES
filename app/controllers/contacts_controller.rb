@@ -56,6 +56,7 @@ def contact
    @dishes = Dish.all
    @contact = Contact.new
    @contact_dish = ContactDish.new
+
  end
 
 def create_small

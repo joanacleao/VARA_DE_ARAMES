@@ -5,18 +5,53 @@
   <div class="col-xs-12">
     <div class="form">
       <%= c.text_field :name, placeholder:"Nome/Empresa"%>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:name].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:name].first %></span>
+      <% end %>
+      <% end %>
     </div >
     <div class="form">
       <%= c.text_field :email, placeholder:"Email" %>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:email].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:email].first %></span>
+      <% end %>
+      <% end %>
     </div >
     <div class="form">
       <%= c.text_field :phone , placeholder:"Telefone" %>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:phone].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:phone].first %></span>
+      <% end %>
+      <% end %>
       <%= c.text_field :localization, placeholder:"Local"  %>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:localization].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:localization].first %></span>
+      <% end %>
+      <% end %>
     </div>
     <div class="form">
      <%= c.date_field :date, as: :date %>
-     <%= c.text_field :n_pax, placeholder:"Adultos" %>
+      <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:date].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:date].first %></span>
+      <% end %>
+      <% end %>
+     <%= c.text_field :n_pax, placeholder:"Adultos"%>
+     <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:n_pax].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:n_pax].first %></span>
+      <% end %>
+      <% end %>
      <%= c.text_field :n_ch, placeholder:"Crianças" %>
+     <% unless @contact.errors.first.nil? %>
+      <% if @contact.errors.messages[:n_ch].present? %>
+      <span class="form-error"><%= @contact.errors.messages[:n_ch].first %></span>
+      <% end %>
+      <% end %>
    </div>
    <div class="add-data">
     <%= c.text_field :comment, placeholder:"Mensagem" %>

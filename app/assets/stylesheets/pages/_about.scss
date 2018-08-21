@@ -53,3 +53,94 @@
     top: 25vh;
   }
 }
+
+@media (max-width: 600px) and (orientation:portrait) {
+
+ .about-container{
+  background-image: image-url('/assets/back_mobile.png');
+  }
+  }
+
+@media (min-width: 601px) and (max-width: 1024px) and (orientation:portrait) {
+
+ .about-container{
+  background-image: image-url('/assets/background_tablet.png');
+  }
+}
+
+
+
+
+@media (max-width: 1024px) and (orientation:landscape) {
+  .about-body{
+    top: 17vh;
+    width: 85%;
+  }
+  .about-title{
+    p{
+      margin: 0 0 6.5px;
+    }
+  }
+}
+@media (width: 1280px) and (height: 800px) and (orientation:landscape) {
+  .about-body{
+      top: 15vh;
+      width: 60%;
+  }
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-height: 812px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation : landscape)
+  {
+    .about-body{
+      width: 65%;
+          left: 30px;
+  }
+  }
+
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-height: 667px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (orientation : landscape)
+    {
+      .about-body{
+        width: 65%;
+    }
+    }
+
+/* iphone 5 */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-height: 568px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation : landscape)
+  {
+  .about-body{
+        width: 85%;
+    }
+  }
+
+
+
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+.about-body{
+    top: 15vh;
+    width: 55%;
+}
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .about-body{
+        width: 65%;
+    }}

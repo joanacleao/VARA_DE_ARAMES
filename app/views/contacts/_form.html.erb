@@ -1,4 +1,4 @@
-
+<% if params[:action] == "new" || params[:action] == "precreate" && !@error_message.nil? %>
 <div class="form-all">
   <%= form_for @contact, html: { class: "form-horizontal center" }, url: { action: "precreate" } do |c| %>
   <div class="col-xs-12">
@@ -97,32 +97,33 @@
    <div class="form intro">
      <p>Extras:</p>
    </div>
-    <div class="form-att">
-      <div class="attribute">
+    <ul><div class="form-att">
+      <li><div class="attribute">
+
         <% if params[:action] == "precreate" && @error_message.nil? %>
         <%= c.check_box :employee, disabled:"true" %>
         <% else %>
         <%= c.check_box :employee %>
         <% end %>
         <%= c.label :employee, "Pessoal p/ servir" %>
-      </div>
-      <div class="attribute">
+
+
         <% if params[:action] == "precreate" && @error_message.nil? %>
         <%= c.check_box :furniture, disabled:"true"   %>
         <% else %>
-        <%= c.check_box :furniture %>
+        <%= c.check_box :furniture%>
         <% end %>
         <%= c.label :furniture, "Mobiliário" %>
-      </div>
-      <div class="attribute">
+
         <% if params[:action] == "precreate" && @error_message.nil? %>
         <%= c.check_box :palament, disabled:"true"%>
         <% else %>
-        <%= c.check_box :palament %>
+        <%= c.check_box :palament%>
         <% end %>
         <%= c.label :palament, "Palamenta" %>
-      </div>
-   </div>
+
+      </div></li>
+   </div></ul>
    <div class="form-end">
    <!--  <select required="require" name="contact[menu_id]" id="contact_menu_id">
       <option disabled selected value="" >Tipo de Evento</option>
@@ -138,5 +139,5 @@
 </div>
 <% end %>
 </div>
-
+<% end %>
 

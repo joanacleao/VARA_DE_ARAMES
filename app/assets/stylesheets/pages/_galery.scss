@@ -58,6 +58,7 @@ height: 90vh;
   font-size: 35px;
   font-weight: bold;
   z-index: 1000;
+  opacity: 1;
 }
 
 .close:hover,
@@ -177,6 +178,12 @@ padding: 1%;
 .prev,
 .next {
   font-size: 40px;
+}
+}
+
+@media (min-width: 601px) and (max-width: 1024px) and (orientation:portrait) {
+.close {
+  font-size: 65px;
 }
 }
 

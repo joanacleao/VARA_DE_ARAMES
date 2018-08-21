@@ -20,7 +20,6 @@
   height: 80vh;
   width: 100%;
   h1{
-    margin-top: 0;
     font-size: 1.2em;
     margin-left:2%;
     margin-top:2%;
@@ -38,7 +37,7 @@
       flex-direction: row;
       justify-content: space-between;
       width: auto;
-      padding-top: 5%;
+      padding-top: 2.5%;
       border-top: 1px solid #DEDCDC;
       .contact-email{
         margin-left:2%;
@@ -67,7 +66,7 @@
   .form-all{
     justify-content: left;
     width: 100%;
-    margin-bottom: 5%;
+    // margin-bottom: 5%;
     .form{
       margin-left:2%;
       margin-right:2%;
@@ -159,22 +158,21 @@
         h1{
           margin-bottom:0;
           padding: 0;
-          width: 70vw;
           align-text:left;
           letter-spacing: 0.1em;
         }
       }
       .form-all{
         justify-content: center;
-        // width: 100%;
+        margin-bottom: 0%;
         .form{
           input{
-            font-size:0.9em;
+            font-size:1.1em;
             border: 1px solid #DEDCDC !important;
           }
         }
          .add-data input {
-          font-size:0.9em;
+          font-size:1.1em;
             border: 1px solid #DEDCDC !important;
         } input {
           font-size:0.9em;
@@ -205,13 +203,128 @@
       }
       .add-data {
         height: auto;
-        width: 70vw;
+        width: auto;
         #contact_comment{
           width: 50vw;
         }
+        .enviar{
+      margin-right: 0%;
+    }
       }
     }
   }
 
+@media (max-width: 1024px) and (orientation:landscape) {
+  .add-data{
+    #contact_comment{
+     border: 1px solid #DEDCDC !important;
+    }
+  }
+  .form-all{
+    margin-bottom: 0%;
+  }
+  .contact-container{
+    h1{
+      margin-bottom:0%;
+    }
+  }
+  .contact-container{
+    .contact-form{
+      .contact-data{
+        padding-top: 5%;
+      }
+    }
+  }
+}
 
+@media (max-width: 1366px) and (orientation:landscape) {
+  .form-all{
+    .form{
+      input{
+        border: 1px solid #DEDCDC !important;
+      }
+    }
+    .add-data{
+      #contact_comment{
+        border: 1px solid #DEDCDC !important;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 641px) and (max-width: 768px) and (orientation:landscape) {
+ .form-all{
+    margin-bottom: 5%;
+  }
+  .contact-container{
+    .contact-form{
+      .contact-data{
+        padding-top: 5%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) and (max-height: 800px) and (orientation:landscape) {
+ .form-all{
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 640px) and (orientation:landscape) {
+
+  .contact-container{
+    .contact-form{
+      .contact-data{
+        padding-top:  5%;
+      }
+    }
+  }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .contact-container{
+  .contact-form{
+      height: 50vh;
+  }
+
+    .contact-photo{
+      height:50vh;
+    }
+  }
+}
+
+@media only screen
+    and (min-device-width : 414px)
+    and (max-device-width : 736px)
+    and (orientation : landscape)
+    and (-webkit-min-device-pixel-ratio : 3)
+{
+  .form-all{
+    margin-bottom: 8%;
+  }
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-height: 812px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation : landscape)
+  {
+  .contact-container{
+    .contact-form{
+      height: 60vh;
+      .contact-data {
+        padding-top: 2.5%;
+      }
+    }
+    .contact-photo{
+      height:60vh;
+    }
+  }
+}
 

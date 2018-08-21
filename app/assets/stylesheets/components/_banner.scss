@@ -154,6 +154,12 @@ li a:active{
     }
   }
 
+  @media (min-width: 600px) and (min-height: 960px) and (orientation:portrait) {
+    body{
+      font-size: 12px;
+    }
+  }
+
   @media (max-width: 600px) and (orientation:portrait){
     body{
       font-size: 10px;
@@ -263,3 +269,5 @@ li a:active{
     }
     }
 }
+
+

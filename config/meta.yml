@@ -1,0 +1,7 @@
+meta.yml
+# config/meta.yml
+
+meta_product_name: "Vara de Arames"
+meta_title: "Vara de Arames - Simple & Honest Cooking"
+meta_description: "Empresa de Catering. Eventos corporativos, coffeebreaks, brunchs,light lunchs, almoços, jantares, cocktails. Eventos particulares."
+meta_image: "logo.jpg"                       # should exist in `app/assets/images/`

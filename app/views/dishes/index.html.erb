@@ -29,12 +29,12 @@
               </div>
 
               <div class="index-menu-dishes-mobile-land">
-                <% @dishes_all.first[0..8].each do |dish|  %>
+                <% @dishes_all.first[0..10].each do |dish|  %>
                 <p><%= dish.name %></p>
                 <% end %>
               </div>
               <div class="index-menu-dishes-mobile-land">
-                <% unless @dishes_all.first[9..-1] == nil %>
+                <% unless @dishes_all.first[11..-1] == nil %>
                 <% @dishes_all.first[9..-1].each do |dish|  %>
                 <p><%= dish.name %></p>
                 <% end %>
@@ -77,12 +77,12 @@
                 <% end %>
               </div>
                <div class="index-menu-dishes-mobile-land">
-                <% i[0..8].each do |dish|  %>
+                <% i[0..10].each do |dish|  %>
                 <p><%= dish.name %></p>
                 <% end %>
               </div>
               <div class="index-menu-dishes-mobile-land">
-                <% unless i[9..-1] == nil %>
+                <% unless i[11..-1] == nil %>
                 <% i[9..-1].each do |dish|  %>
                 <p><%= dish.name %></p>
                 <% end %>

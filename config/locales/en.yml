@@ -62,9 +62,9 @@ en:
             n_ch:
               blank: "obrigatório"
               not_a_number: "Inválido"
-            menu_id:
+            menu:
               blank: "obrigatório"
-              inclusion: "obrigatório!"
+              inclusion: "obrigatório"
             date:
               blank: "obrigatório"
               invalid: "inválido"
