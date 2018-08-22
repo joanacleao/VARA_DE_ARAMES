@@ -23,7 +23,7 @@
     font-size: 1.2em;
     margin-left:2%;
     margin-top:2%;
-    font-weight:300;
+    font-weight:400;
     font-variant:none;
   }
   .contact-form{
@@ -171,10 +171,10 @@
             border: 1px solid #DEDCDC !important;
           }
         }
-         .add-data input {
+         .add-data #contact_comment {
           font-size:1.1em;
             border: 1px solid #DEDCDC !important;
-        } input {
+        } #contact_comment {
           font-size:0.9em;
             border: 1px solid #DEDCDC !important;
         }
@@ -328,3 +328,18 @@ and (orientation : landscape) {
   }
 }
 
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+  .contact-container{
+  .contact-form{
+      height: 50vh;
+  }
+
+    .contact-photo{
+      height:50vh;
+    }
+  }
+}
