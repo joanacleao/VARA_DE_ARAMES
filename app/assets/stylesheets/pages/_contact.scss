@@ -335,11 +335,18 @@ and (orientation : landscape) {
   and (-webkit-min-device-pixel-ratio: 1.5) {
   .contact-container{
   .contact-form{
-      height: 50vh;
+      // height: 50vh;
   }
 
     .contact-photo{
-      height:50vh;
+      // height:50vh;
     }
   }
+  .contact-container{
+  .add-data{
+    .enviar{
+      // font-size: 1em;
+    }
+  }
+}
 }
