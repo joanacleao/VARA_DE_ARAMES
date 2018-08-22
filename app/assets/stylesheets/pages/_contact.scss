@@ -283,20 +283,7 @@
   }
 }
 
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-  .contact-container{
-  .contact-form{
-      height: 50vh;
-  }
 
-    .contact-photo{
-      height:50vh;
-    }
-  }
-}
 
 @media only screen
     and (min-device-width : 414px)
@@ -328,25 +315,4 @@ and (orientation : landscape) {
   }
 }
 
-@media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1366px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-  .contact-container{
-  .contact-form{
-      // height: 50vh;
-  }
 
-    .contact-photo{
-      // height:50vh;
-    }
-  }
-  .contact-container{
-  .add-data{
-    .enviar{
-      // font-size: 1em;
-    }
-  }
-}
-}
