@@ -13,13 +13,13 @@ gem 'redis'
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 4.3.1'
 gem 'font-awesome-sass', '~> 4.7'
-# gem 'sass-rails'
+gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
 gem 'bootstrap-sass', '~> 3.4.1'
-gem 'sassc-rails', '>= 2.1.0'
+# gem 'sassc-rails', '>= 2.1.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
