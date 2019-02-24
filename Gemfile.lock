@@ -213,6 +213,7 @@ DEPENDENCIES
   rails (= 5.1.5)
   redis
   sass-rails
+  sassc-rails (>= 2.1.0)
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
